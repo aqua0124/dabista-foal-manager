@@ -10,7 +10,8 @@
       "power": 7324,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0001"
     },
     {
       "name": "シーザリオ",
@@ -20,7 +21,8 @@
       "power": 7269,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0002"
     },
     {
       "name": "アブソルティミー",
@@ -30,7 +32,8 @@
       "power": 6987,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0003"
     },
     {
       "name": "スターレッツシスター",
@@ -40,7 +43,8 @@
       "power": 7184,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0004"
     },
     {
       "name": "ゴーイングトゥベガス",
@@ -50,7 +54,8 @@
       "power": 6880,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0005"
     },
     {
       "name": "サロミナ",
@@ -60,7 +65,8 @@
       "power": 6781,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0006"
     },
     {
       "name": "ハルーワスウィート",
@@ -70,7 +76,8 @@
       "power": 6713,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0007"
     },
     {
       "name": "ベストインザワールド",
@@ -80,7 +87,8 @@
       "power": 6713,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0008"
     },
     {
       "name": "ゲイルフォース",
@@ -90,7 +98,8 @@
       "power": 6435,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0009"
     },
     {
       "name": "コンセントリック",
@@ -100,7 +109,8 @@
       "power": 6607,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0010"
     },
     {
       "name": "ガウデアムス",
@@ -110,7 +120,8 @@
       "power": 6571,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0011"
     },
     {
       "name": "ステージマジック",
@@ -120,7 +131,8 @@
       "power": 6776,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0012"
     },
     {
       "name": "メアリーズフォリーズ",
@@ -130,7 +142,8 @@
       "power": 6738,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0013"
     },
     {
       "name": "フェザード",
@@ -140,7 +153,8 @@
       "power": 6700,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0014"
     },
     {
       "name": "パレスルーマー",
@@ -150,7 +164,8 @@
       "power": 6181,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0015"
     },
     {
       "name": "コーステッド",
@@ -160,7 +175,8 @@
       "power": 6142,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0016"
     },
     {
       "name": "シルヴァースカヤ",
@@ -170,7 +186,8 @@
       "power": 6341,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0017"
     },
     {
       "name": "ヤンキーローズ",
@@ -180,7 +197,8 @@
       "power": 6300,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0018"
     },
     {
       "name": "ドバイマジェスティ",
@@ -190,7 +208,8 @@
       "power": 6258,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0019"
     },
     {
       "name": "ラヴズオンリーミー",
@@ -200,7 +219,8 @@
       "power": 6216,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0020"
     },
     {
       "name": "アーモニーズエンジェル",
@@ -210,7 +230,8 @@
       "power": 6366,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0021"
     },
     {
       "name": "コントラディクト",
@@ -220,7 +241,8 @@
       "power": 6129,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0022"
     },
     {
       "name": "ジンジャーパンチ",
@@ -230,7 +252,8 @@
       "power": 6084,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0023"
     },
     {
       "name": "ウィルパワー",
@@ -240,7 +263,8 @@
       "power": 6039,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0024"
     },
     {
       "name": "ケイティーズハート",
@@ -250,7 +274,8 @@
       "power": 5992,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0025"
     },
     {
       "name": "シャトーブランシュ",
@@ -260,7 +285,8 @@
       "power": 5992,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0026"
     },
     {
       "name": "ブチコ",
@@ -270,7 +296,8 @@
       "power": 6179,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0027"
     },
     {
       "name": "プーカ",
@@ -280,7 +307,8 @@
       "power": 6179,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0028"
     },
     {
       "name": "マンデラ",
@@ -290,7 +318,8 @@
       "power": 5992,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0029"
     },
     {
       "name": "マイグッドネス",
@@ -300,7 +329,8 @@
       "power": 5944,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0030"
     },
     {
       "name": "アスコルティ",
@@ -310,7 +340,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0031"
     },
     {
       "name": "アルウィルダ",
@@ -320,7 +351,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0032"
     },
     {
       "name": "シンプリーグロリアス",
@@ -330,7 +362,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0033"
     },
     {
       "name": "ソーテルヌ",
@@ -340,7 +373,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0034"
     },
     {
       "name": "ナイトタイム",
@@ -350,7 +384,8 @@
       "power": 5711,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0035"
     },
     {
       "name": "ファイアバーン",
@@ -360,7 +395,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0036"
     },
     {
       "name": "フォエヴァーダーリング",
@@ -370,7 +406,8 @@
       "power": 6080,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0037"
     },
     {
       "name": "ベガスショーガール",
@@ -380,7 +417,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0038"
     },
     {
       "name": "ロカ",
@@ -390,7 +428,8 @@
       "power": 5896,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0039"
     },
     {
       "name": "グレースアドラー",
@@ -400,7 +439,8 @@
       "power": 5846,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0040"
     },
     {
       "name": "セリエンホルデ",
@@ -410,7 +450,8 @@
       "power": 5846,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0041"
     },
     {
       "name": "アンナサライ",
@@ -420,7 +461,8 @@
       "power": 5794,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0042"
     },
     {
       "name": "アーモンドアイ",
@@ -430,7 +472,8 @@
       "power": 5613,
       "dirt": "△",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0043"
     },
     {
       "name": "ウェイヴェルアベニュー",
@@ -440,7 +483,8 @@
       "power": 5794,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0044"
     },
     {
       "name": "ミスパスカリ",
@@ -450,7 +494,8 @@
       "power": 5794,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0045"
     },
     {
       "name": "アパパネ",
@@ -460,7 +505,8 @@
       "power": 5742,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0046"
     },
     {
       "name": "セルフレスリー",
@@ -470,7 +516,8 @@
       "power": 5742,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0047"
     },
     {
       "name": "エピックラヴ",
@@ -480,7 +527,8 @@
       "power": 5510,
       "dirt": "△",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0048"
     },
     {
       "name": "キングズハーレクイーン",
@@ -490,7 +538,8 @@
       "power": 5688,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0049"
     },
     {
       "name": "ツルマルワンピース",
@@ -500,7 +549,8 @@
       "power": 5688,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0050"
     },
     {
       "name": "アクトレス",
@@ -510,7 +560,8 @@
       "power": 5809,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0051"
     },
     {
       "name": "インディアマントゥアナ",
@@ -520,7 +571,8 @@
       "power": 5633,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0052"
     },
     {
       "name": "キングスローズ",
@@ -530,7 +582,8 @@
       "power": 5633,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0053"
     },
     {
       "name": "スタセリタ",
@@ -540,7 +593,8 @@
       "power": 5457,
       "dirt": "△",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0054"
     },
     {
       "name": "ダンスアミーガ",
@@ -550,7 +604,8 @@
       "power": 5633,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0055"
     },
     {
       "name": "ノンナベッラ",
@@ -560,7 +615,8 @@
       "power": 5809,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0056"
     },
     {
       "name": "バブラー",
@@ -570,7 +626,8 @@
       "power": 5809,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0057"
     },
     {
       "name": "マッドアバウトユー",
@@ -580,7 +637,8 @@
       "power": 5809,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0058"
     },
     {
       "name": "ライフフォーセール",
@@ -590,7 +648,8 @@
       "power": 5633,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0059"
     },
     {
       "name": "ラドラーダ",
@@ -600,7 +659,8 @@
       "power": 5633,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0060"
     },
     {
       "name": "アラビアンソング",
@@ -610,7 +670,8 @@
       "power": 5750,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0061"
     },
     {
       "name": "アロマティコ",
@@ -620,7 +681,8 @@
       "power": 5576,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0062"
     },
     {
       "name": "イースタンジョイ",
@@ -630,7 +692,8 @@
       "power": 5576,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0063"
     },
     {
       "name": "コスモズバディー",
@@ -640,7 +703,8 @@
       "power": 5750,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0064"
     },
     {
       "name": "コルコバード",
@@ -650,7 +714,8 @@
       "power": 5576,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0065"
     },
     {
       "name": "コンテスティッド",
@@ -660,7 +725,8 @@
       "power": 5576,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0066"
     },
     {
       "name": "シュガーハート",
@@ -670,7 +736,8 @@
       "power": 5576,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0067"
     },
     {
       "name": "ティフアナ",
@@ -680,7 +747,8 @@
       "power": 5576,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0068"
     },
     {
       "name": "フォークメロディー",
@@ -690,7 +758,8 @@
       "power": 5402,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0069"
     },
     {
       "name": "フロールス",
@@ -700,7 +769,8 @@
       "power": 5750,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0070"
     },
     {
       "name": "マラコスタムブラダ",
@@ -710,7 +780,8 @@
       "power": 5402,
       "dirt": "△",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0071"
     },
     {
       "name": "リッスン",
@@ -720,7 +791,8 @@
       "power": 5402,
       "dirt": "△",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0072"
     },
     {
       "name": "レディマドンナ",
@@ -730,7 +802,8 @@
       "power": 5750,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0073"
     },
     {
       "name": "アンリーチャブル",
@@ -740,7 +813,8 @@
       "power": 5690,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0074"
     },
     {
       "name": "サンブルエミューズ",
@@ -750,7 +824,8 @@
       "power": 5517,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0075"
     },
     {
       "name": "シャスティエ",
@@ -760,7 +835,8 @@
       "power": 5345,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0076"
     },
     {
       "name": "シーリングクラッシャー",
@@ -770,7 +846,8 @@
       "power": 5517,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0077"
     },
     {
       "name": "バラダセール",
@@ -780,7 +857,8 @@
       "power": 5517,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0078"
     },
     {
       "name": "カームウォーター",
@@ -790,7 +868,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0079"
     },
     {
       "name": "クロノロジスト",
@@ -800,7 +879,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0080"
     },
     {
       "name": "クワイエットジャイアント",
@@ -810,7 +890,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0081"
     },
     {
       "name": "タングリトナ",
@@ -820,7 +901,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0082"
     },
     {
       "name": "ヒルダズパッション",
@@ -830,7 +912,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0083"
     },
     {
       "name": "ミュージアムヒル",
@@ -840,7 +923,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0084"
     },
     {
       "name": "メーヴェ",
@@ -850,7 +934,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0085"
     },
     {
       "name": "リュヌドール",
@@ -860,7 +945,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0086"
     },
     {
       "name": "ルシュクル",
@@ -870,7 +956,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0087"
     },
     {
       "name": "レッドエヴィ",
@@ -880,7 +967,8 @@
       "power": 5457,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0088"
     },
     {
       "name": "エミュラス",
@@ -890,7 +978,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0089"
     },
     {
       "name": "コミッショニング",
@@ -900,7 +989,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0090"
     },
     {
       "name": "シャルロットロジーナ",
@@ -910,7 +1000,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0091"
     },
     {
       "name": "シユーマ",
@@ -920,7 +1011,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0092"
     },
     {
       "name": "ダストアンドダイヤモンズ",
@@ -930,7 +1022,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0093"
     },
     {
       "name": "チリエージェ",
@@ -940,7 +1033,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0094"
     },
     {
       "name": "ヘヴンリーラヴ",
@@ -950,7 +1044,8 @@
       "power": 5563,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0095"
     },
     {
       "name": "マスクオフ",
@@ -960,7 +1055,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0096"
     },
     {
       "name": "ミスエーニョ",
@@ -970,7 +1066,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0097"
     },
     {
       "name": "ムーチョアンユージュアル",
@@ -980,7 +1077,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0098"
     },
     {
       "name": "ラルケット",
@@ -990,7 +1088,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0099"
     },
     {
       "name": "リリサイド",
@@ -1000,7 +1099,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0100"
     },
     {
       "name": "ヴァルトレルヒェ",
@@ -1010,7 +1110,8 @@
       "power": 5395,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0101"
     },
     {
       "name": "アンティフォナ",
@@ -1020,7 +1121,8 @@
       "power": 5497,
       "dirt": "◎",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0102"
     },
     {
       "name": "チェッキーノ",
@@ -1030,7 +1132,8 @@
       "power": 5330,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0103"
     },
     {
       "name": "チェリーコレクト",
@@ -1040,7 +1143,8 @@
       "power": 5330,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0104"
     },
     {
       "name": "アンドラステ",
@@ -1050,7 +1154,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0105"
     },
     {
       "name": "ギフトリスト",
@@ -1060,7 +1165,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0106"
     },
     {
       "name": "クロウキャニオン",
@@ -1070,7 +1176,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0107"
     },
     {
       "name": "シーフロント",
@@ -1080,7 +1187,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0108"
     },
     {
       "name": "スペシャルグルーヴ",
@@ -1090,7 +1198,8 @@
       "power": 5428,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0109"
     },
     {
       "name": "ドバウィハイツ",
@@ -1100,7 +1209,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0110"
     },
     {
       "name": "バルドウィナ",
@@ -1110,7 +1220,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0111"
     },
     {
       "name": "ホロロジスト",
@@ -1120,7 +1231,8 @@
       "power": 5428,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0112"
     },
     {
       "name": "マイネテレジア",
@@ -1130,7 +1242,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0113"
     },
     {
       "name": "ミステリーエンジェル",
@@ -1140,7 +1253,8 @@
       "power": 5264,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0114"
     },
     {
       "name": "ベッラガンバ",
@@ -1150,7 +1264,8 @@
       "power": 5194,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0115"
     },
     {
       "name": "モアザンセイクリッド",
@@ -1160,7 +1275,8 @@
       "power": 5194,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0116"
     },
     {
       "name": "レッドファンタジア",
@@ -1170,7 +1286,8 @@
       "power": 5194,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0117"
     },
     {
       "name": "レディランドルフ",
@@ -1180,7 +1297,8 @@
       "power": 5194,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0118"
     },
     {
       "name": "イーヴンソー",
@@ -1190,7 +1308,8 @@
       "power": 5122,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0119"
     },
     {
       "name": "キティ",
@@ -1200,7 +1319,8 @@
       "power": 5282,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0120"
     },
     {
       "name": "コンドコマンド",
@@ -1210,7 +1330,8 @@
       "power": 5122,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0121"
     },
     {
       "name": "シロインジャー",
@@ -1220,7 +1341,8 @@
       "power": 5122,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0122"
     },
     {
       "name": "ネヌファーアズール",
@@ -1230,7 +1352,8 @@
       "power": 5122,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0123"
     },
     {
       "name": "リリーオブザヴァレー",
@@ -1240,7 +1363,8 @@
       "power": 5122,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0124"
     },
     {
       "name": "アクアリング",
@@ -1250,7 +1374,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0125"
     },
     {
       "name": "カラフルブラッサム",
@@ -1260,7 +1385,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0126"
     },
     {
       "name": "サンクイーンII",
@@ -1270,7 +1396,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0127"
     },
     {
       "name": "デアリングバード",
@@ -1280,7 +1407,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0128"
     },
     {
       "name": "トゥーピー",
@@ -1290,7 +1418,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0129"
     },
     {
       "name": "ノームコア",
@@ -1300,7 +1429,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0130"
     },
     {
       "name": "フレンチノワール",
@@ -1310,7 +1440,8 @@
       "power": 5205,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0131"
     },
     {
       "name": "ブラーリーメモリー",
@@ -1320,7 +1451,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0132"
     },
     {
       "name": "ライジングクロス",
@@ -1330,7 +1462,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0133"
     },
     {
       "name": "リアアントニア",
@@ -1340,7 +1473,8 @@
       "power": 5047,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0134"
     },
     {
       "name": "エアルーティーン",
@@ -1350,7 +1484,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0135"
     },
     {
       "name": "クラークスデール",
@@ -1360,7 +1495,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0136"
     },
     {
       "name": "サザンスターズ",
@@ -1370,7 +1506,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0137"
     },
     {
       "name": "サマーハ",
@@ -1380,7 +1517,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0138"
     },
     {
       "name": "シーブリーズライフ",
@@ -1390,7 +1528,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0139"
     },
     {
       "name": "スカーレット",
@@ -1400,7 +1539,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0140"
     },
     {
       "name": "スキア",
@@ -1410,7 +1550,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0141"
     },
     {
       "name": "ハウオリ",
@@ -1420,7 +1561,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0142"
     },
     {
       "name": "ムードインディゴ",
@@ -1430,7 +1572,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0143"
     },
     {
       "name": "ライラックスアンドレース",
@@ -1440,7 +1583,8 @@
       "power": 4969,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0144"
     },
     {
       "name": "シンハリーズ",
@@ -1450,7 +1594,8 @@
       "power": 4887,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0145"
     },
     {
       "name": "ターフドンナ",
@@ -1460,7 +1605,8 @@
       "power": 4734,
       "dirt": "△",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0146"
     },
     {
       "name": "トウカイライフ",
@@ -1470,7 +1616,8 @@
       "power": 4887,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0147"
     },
     {
       "name": "ブリッツフィナーレ",
@@ -1480,7 +1627,8 @@
       "power": 4887,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0148"
     },
     {
       "name": "ペンジャ",
@@ -1490,7 +1638,8 @@
       "power": 4887,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0149"
     },
     {
       "name": "リトルブック",
@@ -1500,7 +1649,8 @@
       "power": 4887,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0150"
     },
     {
       "name": "アドマイヤテレサ",
@@ -1510,7 +1660,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0151"
     },
     {
       "name": "カルティカ",
@@ -1520,7 +1671,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0152"
     },
     {
       "name": "ジェンティルドンナ",
@@ -1530,7 +1682,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0153"
     },
     {
       "name": "ソーマジック",
@@ -1540,7 +1693,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0154"
     },
     {
       "name": "トシザコジーン",
@@ -1550,7 +1704,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0155"
     },
     {
       "name": "マアム",
@@ -1560,7 +1715,8 @@
       "power": 4950,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0156"
     },
     {
       "name": "リッチダンサー",
@@ -1570,7 +1726,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0157"
     },
     {
       "name": "ロッテンマイヤー",
@@ -1580,7 +1737,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0158"
     },
     {
       "name": "ロードクロサイト",
@@ -1590,7 +1748,8 @@
       "power": 4800,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0159"
     },
     {
       "name": "アンナペレンナ",
@@ -1600,7 +1759,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0160"
     },
     {
       "name": "キラーグレイシス",
@@ -1610,7 +1770,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0161"
     },
     {
       "name": "クロノジェネシス",
@@ -1620,7 +1781,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0162"
     },
     {
       "name": "グランアレグリア",
@@ -1630,7 +1792,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0163"
     },
     {
       "name": "グルヴェイグ",
@@ -1640,7 +1803,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0164"
     },
     {
       "name": "ジャポニカーラ",
@@ -1650,7 +1814,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0165"
     },
     {
       "name": "スピニングワイルドキャット",
@@ -1660,7 +1825,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0166"
     },
     {
       "name": "ノーブルステラ",
@@ -1670,7 +1836,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0167"
     },
     {
       "name": "マシュマロ",
@@ -1680,7 +1847,8 @@
       "power": 4856,
       "dirt": "◎",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0168"
     },
     {
       "name": "ラストグルーヴ",
@@ -1690,7 +1858,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0169"
     },
     {
       "name": "レズー",
@@ -1700,7 +1869,8 @@
       "power": 4709,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0170"
     },
     {
       "name": "アンナモンダ",
@@ -1710,7 +1880,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0171"
     },
     {
       "name": "カンビーナ",
@@ -1720,7 +1891,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0172"
     },
     {
       "name": "ココシュニック",
@@ -1730,7 +1902,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0173"
     },
     {
       "name": "コスモチェーロ",
@@ -1740,7 +1913,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0174"
     },
     {
       "name": "サンドラⅡ",
@@ -1750,7 +1924,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0175"
     },
     {
       "name": "ジョイネヴァーランド",
@@ -1760,7 +1935,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0176"
     },
     {
       "name": "セルキス",
@@ -1770,7 +1946,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0177"
     },
     {
       "name": "ニシノムーンライト",
@@ -1780,7 +1957,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0178"
     },
     {
       "name": "ブエナビスタ",
@@ -1790,7 +1968,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0179"
     },
     {
       "name": "プラウドスペル",
@@ -1800,7 +1979,8 @@
       "power": 4757,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0180"
     },
     {
       "name": "プリームス",
@@ -1810,7 +1990,8 @@
       "power": 4757,
       "dirt": "◎",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0181"
     },
     {
       "name": "ポルトフィーノ",
@@ -1820,7 +2001,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "C"
+      "temperament": "C",
+      "id": "BM-0182"
     },
     {
       "name": "マイジェン",
@@ -1830,7 +2012,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0183"
     },
     {
       "name": "マニーシャ",
@@ -1840,7 +2023,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0184"
     },
     {
       "name": "マルセリーナ",
@@ -1850,7 +2034,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0185"
     },
     {
       "name": "ムーンライトダンス",
@@ -1860,7 +2045,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0186"
     },
     {
       "name": "モシーン",
@@ -1870,7 +2056,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0187"
     },
     {
       "name": "モルガナイト",
@@ -1880,7 +2067,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0188"
     },
     {
       "name": "ヴィヤダーナ",
@@ -1890,7 +2078,8 @@
       "power": 4613,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0189"
     },
     {
       "name": "アニメイトバイオ",
@@ -1900,7 +2089,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0190"
     },
     {
       "name": "カツラドライバー",
@@ -1910,7 +2100,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0191"
     },
     {
       "name": "クイーンピカソ",
@@ -1920,7 +2111,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0192"
     },
     {
       "name": "サミター",
@@ -1930,7 +2122,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0193"
     },
     {
       "name": "サンキューメアリールー",
@@ -1940,7 +2133,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0194"
     },
     {
       "name": "シーオブラブ",
@@ -1950,7 +2144,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0195"
     },
     {
       "name": "ステファニーズキトゥン",
@@ -1960,7 +2155,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0196"
     },
     {
       "name": "ソフィアズソング",
@@ -1970,7 +2166,8 @@
       "power": 4651,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0197"
     },
     {
       "name": "ハーランズルビー",
@@ -1980,7 +2177,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0198"
     },
     {
       "name": "パスオブドリームズ",
@@ -1990,7 +2188,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0199"
     },
     {
       "name": "プリティカリーナ",
@@ -2000,7 +2199,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0200"
     },
     {
       "name": "ベネンシアドール",
@@ -2010,7 +2210,8 @@
       "power": 4369,
       "dirt": "△",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0201"
     },
     {
       "name": "マダムチェロキー",
@@ -2020,7 +2221,8 @@
       "power": 4651,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0202"
     },
     {
       "name": "マルターズヒート",
@@ -2030,7 +2232,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0203"
     },
     {
       "name": "リリーノーブル",
@@ -2040,7 +2243,8 @@
       "power": 4510,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0204"
     },
     {
       "name": "タイタンクイーン",
@@ -2050,7 +2254,8 @@
       "power": 4499,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0205"
     },
     {
       "name": "マハーバーラタ",
@@ -2060,7 +2265,8 @@
       "power": 4499,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0206"
     },
     {
       "name": "オーサムフェザー",
@@ -2070,7 +2276,8 @@
       "power": 4488,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0207"
     },
     {
       "name": "エルフィンパーク",
@@ -2080,7 +2287,8 @@
       "power": 4477,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0208"
     },
     {
       "name": "ミュージカルロマンス",
@@ -2090,7 +2298,8 @@
       "power": 4477,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0209"
     },
     {
       "name": "ブルーメンブラット",
@@ -2100,7 +2309,8 @@
       "power": 4466,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0210"
     },
     {
       "name": "ベルベットローブ",
@@ -2110,7 +2320,8 @@
       "power": 4606,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0211"
     },
     {
       "name": "テディーズプロミス",
@@ -2120,7 +2331,8 @@
       "power": 4455,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0212"
     },
     {
       "name": "ポーレン",
@@ -2130,7 +2342,8 @@
       "power": 4455,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0213"
     },
     {
       "name": "エクセレンスII",
@@ -2140,7 +2353,8 @@
       "power": 4444,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0214"
     },
     {
       "name": "クーデグレイス",
@@ -2150,7 +2364,8 @@
       "power": 4444,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0215"
     },
     {
       "name": "ゴールデンドックエー",
@@ -2160,7 +2375,8 @@
       "power": 4444,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0216"
     },
     {
       "name": "ショウリュウムーン",
@@ -2170,7 +2386,8 @@
       "power": 4444,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0217"
     },
     {
       "name": "フォーエヴァービー",
@@ -2180,7 +2397,8 @@
       "power": 4444,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0218"
     },
     {
       "name": "ムーンライトベイ",
@@ -2190,7 +2408,8 @@
       "power": 4444,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0219"
     },
     {
       "name": "ムーングロウ",
@@ -2200,7 +2419,8 @@
       "power": 4433,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0220"
     },
     {
       "name": "インダクティ",
@@ -2210,7 +2430,8 @@
       "power": 4422,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0221"
     },
     {
       "name": "タイムフェアレディ",
@@ -2220,7 +2441,8 @@
       "power": 4284,
       "dirt": "△",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0222"
     },
     {
       "name": "ランズエッジ",
@@ -2230,7 +2452,8 @@
       "power": 4422,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0223"
     },
     {
       "name": "ホットチャチャ",
@@ -2240,7 +2463,8 @@
       "power": 4411,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0224"
     },
     {
       "name": "ポロンナルワ",
@@ -2250,7 +2474,8 @@
       "power": 4537,
       "dirt": "◎",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0225"
     },
     {
       "name": "コスモクリスタル",
@@ -2260,7 +2485,8 @@
       "power": 4388,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0226"
     },
     {
       "name": "レイズアンドコール",
@@ -2270,7 +2496,8 @@
       "power": 4388,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0227"
     },
     {
       "name": "アメージングムーン",
@@ -2280,7 +2507,8 @@
       "power": 4376,
       "dirt": "○",
       "constitution": "A",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0228"
     },
     {
       "name": "エーシンクールディ",
@@ -2290,7 +2518,8 @@
       "power": 4376,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0229"
     },
     {
       "name": "シリアスアティテュード",
@@ -2300,7 +2529,8 @@
       "power": 4376,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0230"
     },
     {
       "name": "ブルーミンバー",
@@ -2310,7 +2540,8 @@
       "power": 4364,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0231"
     },
     {
       "name": "メイショウツバクロ",
@@ -2320,7 +2551,8 @@
       "power": 4364,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "A"
+      "temperament": "A",
+      "id": "BM-0232"
     },
     {
       "name": "キャプテンガール",
@@ -2330,7 +2562,8 @@
       "power": 4353,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0233"
     },
     {
       "name": "ホワイトアルバム",
@@ -2340,7 +2573,8 @@
       "power": 4353,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0234"
     },
     {
       "name": "ヴィーヴァブーケ",
@@ -2350,7 +2584,8 @@
       "power": 4353,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0235"
     },
     {
       "name": "インクルードベティ",
@@ -2360,7 +2595,8 @@
       "power": 4341,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0236"
     },
     {
       "name": "ロザリンド",
@@ -2370,7 +2606,8 @@
       "power": 4317,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0237"
     },
     {
       "name": "ペンカナプリンセス",
@@ -2380,7 +2617,8 @@
       "power": 4292,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0238"
     },
     {
       "name": "アビラ",
@@ -2390,7 +2628,8 @@
       "power": 4414,
       "dirt": "◎",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0239"
     },
     {
       "name": "シャムロッカー",
@@ -2400,7 +2639,8 @@
       "power": 4280,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0240"
     },
     {
       "name": "スウィートリーズン",
@@ -2410,7 +2650,8 @@
       "power": 4280,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0241"
     },
     {
       "name": "スターペスミツコ",
@@ -2420,7 +2661,8 @@
       "power": 4414,
       "dirt": "◎",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0242"
     },
     {
       "name": "ダイヤモンドディーバ",
@@ -2430,7 +2672,8 @@
       "power": 4280,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0243"
     },
     {
       "name": "ファディラー",
@@ -2440,7 +2683,8 @@
       "power": 4280,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0244"
     },
     {
       "name": "ブラックエンブレム",
@@ -2450,7 +2694,8 @@
       "power": 4280,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0245"
     },
     {
       "name": "レッドエルザ",
@@ -2460,7 +2705,8 @@
       "power": 4280,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0246"
     },
     {
       "name": "ソベラニア",
@@ -2470,7 +2716,8 @@
       "power": 4255,
       "dirt": "○",
       "constitution": "C",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0247"
     },
     {
       "name": "ディヴィナプレシオーサ",
@@ -2480,7 +2727,8 @@
       "power": 4255,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0248"
     },
     {
       "name": "ラスティングソング",
@@ -2490,7 +2738,8 @@
       "power": 4242,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0249"
     },
     {
       "name": "ジョイヴェリカ",
@@ -2500,7 +2749,8 @@
       "power": 4229,
       "dirt": "○",
       "constitution": "B",
-      "temperament": "B"
+      "temperament": "B",
+      "id": "BM-0250"
     }
   ]
 }
