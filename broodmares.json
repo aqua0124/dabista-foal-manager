@@ -1,0 +1,2506 @@
+{
+  "schemaVersion": 1,
+  "kind": "broodmares",
+  "horses": [
+    {
+      "name": "キャバレイ",
+      "price": 70000,
+      "speed": 8560,
+      "stamina": 7004,
+      "power": 7324,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シーザリオ",
+      "price": 68000,
+      "speed": 7723,
+      "stamina": 7723,
+      "power": 7269,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アブソルティミー",
+      "price": 66000,
+      "speed": 6999,
+      "stamina": 8554,
+      "power": 6987,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "スターレッツシスター",
+      "price": 65000,
+      "speed": 6870,
+      "stamina": 8397,
+      "power": 7184,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ゴーイングトゥベガス",
+      "price": 55000,
+      "speed": 7310,
+      "stamina": 7310,
+      "power": 6880,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サロミナ",
+      "price": 52000,
+      "speed": 7926,
+      "stamina": 6484,
+      "power": 6781,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "ハルーワスウィート",
+      "price": 50000,
+      "speed": 6419,
+      "stamina": 7846,
+      "power": 6713,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ベストインザワールド",
+      "price": 50000,
+      "speed": 6419,
+      "stamina": 7846,
+      "power": 6713,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "A"
+    },
+    {
+      "name": "ゲイルフォース",
+      "price": 48000,
+      "speed": 6446,
+      "stamina": 7878,
+      "power": 6435,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コンセントリック",
+      "price": 47000,
+      "speed": 6318,
+      "stamina": 7722,
+      "power": 6607,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ガウデアムス",
+      "price": 46000,
+      "speed": 8378,
+      "stamina": 5585,
+      "power": 6571,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ステージマジック",
+      "price": 46000,
+      "speed": 6879,
+      "stamina": 6879,
+      "power": 6776,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "メアリーズフォリーズ",
+      "price": 45000,
+      "speed": 7524,
+      "stamina": 6156,
+      "power": 6738,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "フェザード",
+      "price": 44000,
+      "speed": 6801,
+      "stamina": 6801,
+      "power": 6700,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "パレスルーマー",
+      "price": 41000,
+      "speed": 6191,
+      "stamina": 7567,
+      "power": 6181,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コーステッド",
+      "price": 40000,
+      "speed": 6152,
+      "stamina": 7520,
+      "power": 6142,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シルヴァースカヤ",
+      "price": 40000,
+      "speed": 7411,
+      "stamina": 6063,
+      "power": 6341,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ヤンキーローズ",
+      "price": 39000,
+      "speed": 7363,
+      "stamina": 6024,
+      "power": 6300,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ドバイマジェスティ",
+      "price": 38000,
+      "speed": 5985,
+      "stamina": 7315,
+      "power": 6258,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ラヴズオンリーミー",
+      "price": 37000,
+      "speed": 6605,
+      "stamina": 6605,
+      "power": 6216,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アーモニーズエンジェル",
+      "price": 36000,
+      "speed": 7109,
+      "stamina": 5816,
+      "power": 6366,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コントラディクト",
+      "price": 35000,
+      "speed": 6512,
+      "stamina": 6512,
+      "power": 6129,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ジンジャーパンチ",
+      "price": 34000,
+      "speed": 6465,
+      "stamina": 6465,
+      "power": 6084,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ウィルパワー",
+      "price": 33000,
+      "speed": 7700,
+      "stamina": 5133,
+      "power": 6039,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ケイティーズハート",
+      "price": 32000,
+      "speed": 6367,
+      "stamina": 6367,
+      "power": 5992,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "シャトーブランシュ",
+      "price": 32000,
+      "speed": 6367,
+      "stamina": 6367,
+      "power": 5992,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ブチコ",
+      "price": 32000,
+      "speed": 7528,
+      "stamina": 5018,
+      "power": 6179,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "プーカ",
+      "price": 32000,
+      "speed": 6273,
+      "stamina": 6273,
+      "power": 6179,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マンデラ",
+      "price": 32000,
+      "speed": 5093,
+      "stamina": 7640,
+      "power": 5992,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マイグッドネス",
+      "price": 31000,
+      "speed": 6948,
+      "stamina": 5684,
+      "power": 5944,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "アスコルティ",
+      "price": 30000,
+      "speed": 6891,
+      "stamina": 5638,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アルウィルダ",
+      "price": 30000,
+      "speed": 6264,
+      "stamina": 6264,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シンプリーグロリアス",
+      "price": 30000,
+      "speed": 6891,
+      "stamina": 5638,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ソーテルヌ",
+      "price": 30000,
+      "speed": 6891,
+      "stamina": 5638,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ナイトタイム",
+      "price": 30000,
+      "speed": 5721,
+      "stamina": 6992,
+      "power": 5711,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ファイアバーン",
+      "price": 30000,
+      "speed": 6891,
+      "stamina": 5638,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "フォエヴァーダーリング",
+      "price": 30000,
+      "speed": 6172,
+      "stamina": 6172,
+      "power": 6080,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ベガスショーガール",
+      "price": 30000,
+      "speed": 6891,
+      "stamina": 5638,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ロカ",
+      "price": 30000,
+      "speed": 5638,
+      "stamina": 6891,
+      "power": 5896,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "グレースアドラー",
+      "price": 29000,
+      "speed": 6832,
+      "stamina": 5590,
+      "power": 5846,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "セリエンホルデ",
+      "price": 29000,
+      "speed": 7453,
+      "stamina": 4969,
+      "power": 5846,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アンナサライ",
+      "price": 28000,
+      "speed": 6157,
+      "stamina": 6157,
+      "power": 5794,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アーモンドアイ",
+      "price": 28000,
+      "speed": 6247,
+      "stamina": 6247,
+      "power": 5613,
+      "dirt": "△",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ウェイヴェルアベニュー",
+      "price": 28000,
+      "speed": 6772,
+      "stamina": 5541,
+      "power": 5794,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ミスパスカリ",
+      "price": 28000,
+      "speed": 4925,
+      "stamina": 7388,
+      "power": 5794,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "アパパネ",
+      "price": 27000,
+      "speed": 6101,
+      "stamina": 6101,
+      "power": 5742,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "セルフレスリー",
+      "price": 27000,
+      "speed": 6711,
+      "stamina": 5491,
+      "power": 5742,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "エピックラヴ",
+      "price": 26000,
+      "speed": 6746,
+      "stamina": 5519,
+      "power": 5510,
+      "dirt": "△",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "キングズハーレクイーン",
+      "price": 26000,
+      "speed": 6648,
+      "stamina": 5439,
+      "power": 5688,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ツルマルワンピース",
+      "price": 26000,
+      "speed": 5439,
+      "stamina": 6648,
+      "power": 5688,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アクトレス",
+      "price": 25000,
+      "speed": 5897,
+      "stamina": 5897,
+      "power": 5809,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "インディアマントゥアナ",
+      "price": 25000,
+      "speed": 6583,
+      "stamina": 5386,
+      "power": 5633,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "キングスローズ",
+      "price": 25000,
+      "speed": 5985,
+      "stamina": 5985,
+      "power": 5633,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "スタセリタ",
+      "price": 25000,
+      "speed": 5466,
+      "stamina": 6680,
+      "power": 5457,
+      "dirt": "△",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ダンスアミーガ",
+      "price": 25000,
+      "speed": 5985,
+      "stamina": 5985,
+      "power": 5633,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ノンナベッラ",
+      "price": 25000,
+      "speed": 5897,
+      "stamina": 5897,
+      "power": 5809,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "バブラー",
+      "price": 25000,
+      "speed": 5897,
+      "stamina": 5897,
+      "power": 5809,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マッドアバウトユー",
+      "price": 25000,
+      "speed": 7076,
+      "stamina": 4717,
+      "power": 5809,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ライフフォーセール",
+      "price": 25000,
+      "speed": 6583,
+      "stamina": 5386,
+      "power": 5633,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ラドラーダ",
+      "price": 25000,
+      "speed": 5985,
+      "stamina": 5985,
+      "power": 5633,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "アラビアンソング",
+      "price": 24000,
+      "speed": 5837,
+      "stamina": 5837,
+      "power": 5750,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アロマティコ",
+      "price": 24000,
+      "speed": 5332,
+      "stamina": 6517,
+      "power": 5576,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "イースタンジョイ",
+      "price": 24000,
+      "speed": 6517,
+      "stamina": 5332,
+      "power": 5576,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コスモズバディー",
+      "price": 24000,
+      "speed": 6421,
+      "stamina": 5254,
+      "power": 5750,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コルコバード",
+      "price": 24000,
+      "speed": 5332,
+      "stamina": 6517,
+      "power": 5576,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コンテスティッド",
+      "price": 24000,
+      "speed": 5925,
+      "stamina": 5925,
+      "power": 5576,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シュガーハート",
+      "price": 24000,
+      "speed": 4740,
+      "stamina": 7110,
+      "power": 5576,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "A"
+    },
+    {
+      "name": "ティフアナ",
+      "price": 24000,
+      "speed": 5925,
+      "stamina": 5925,
+      "power": 5576,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "フォークメロディー",
+      "price": 24000,
+      "speed": 6012,
+      "stamina": 6012,
+      "power": 5402,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "フロールス",
+      "price": 24000,
+      "speed": 6421,
+      "stamina": 5254,
+      "power": 5750,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マラコスタムブラダ",
+      "price": 24000,
+      "speed": 6613,
+      "stamina": 5410,
+      "power": 5402,
+      "dirt": "△",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "リッスン",
+      "price": 24000,
+      "speed": 5410,
+      "stamina": 6613,
+      "power": 5402,
+      "dirt": "△",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "レディマドンナ",
+      "price": 24000,
+      "speed": 5837,
+      "stamina": 5837,
+      "power": 5750,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アンリーチャブル",
+      "price": 23000,
+      "speed": 6354,
+      "stamina": 5198,
+      "power": 5690,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サンブルエミューズ",
+      "price": 23000,
+      "speed": 6449,
+      "stamina": 5276,
+      "power": 5517,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シャスティエ",
+      "price": 23000,
+      "speed": 5354,
+      "stamina": 6543,
+      "power": 5345,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シーリングクラッシャー",
+      "price": 23000,
+      "speed": 7035,
+      "stamina": 4690,
+      "power": 5517,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "バラダセール",
+      "price": 23000,
+      "speed": 5862,
+      "stamina": 5862,
+      "power": 5517,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "カームウォーター",
+      "price": 22000,
+      "speed": 5798,
+      "stamina": 5798,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "クロノロジスト",
+      "price": 22000,
+      "speed": 5798,
+      "stamina": 5798,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "クワイエットジャイアント",
+      "price": 22000,
+      "speed": 6378,
+      "stamina": 5218,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "タングリトナ",
+      "price": 22000,
+      "speed": 5798,
+      "stamina": 5798,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ヒルダズパッション",
+      "price": 22000,
+      "speed": 6378,
+      "stamina": 5218,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ミュージアムヒル",
+      "price": 22000,
+      "speed": 5798,
+      "stamina": 5798,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "メーヴェ",
+      "price": 22000,
+      "speed": 4638,
+      "stamina": 6958,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "A"
+    },
+    {
+      "name": "リュヌドール",
+      "price": 22000,
+      "speed": 5218,
+      "stamina": 6378,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "A"
+    },
+    {
+      "name": "ルシュクル",
+      "price": 22000,
+      "speed": 6958,
+      "stamina": 4638,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "レッドエヴィ",
+      "price": 22000,
+      "speed": 5798,
+      "stamina": 5798,
+      "power": 5457,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "エミュラス",
+      "price": 21000,
+      "speed": 5732,
+      "stamina": 5732,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コミッショニング",
+      "price": 21000,
+      "speed": 6305,
+      "stamina": 5159,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シャルロットロジーナ",
+      "price": 21000,
+      "speed": 6878,
+      "stamina": 4585,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "シユーマ",
+      "price": 21000,
+      "speed": 6305,
+      "stamina": 5159,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ダストアンドダイヤモンズ",
+      "price": 21000,
+      "speed": 5732,
+      "stamina": 5732,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "チリエージェ",
+      "price": 21000,
+      "speed": 6878,
+      "stamina": 4585,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ヘヴンリーラヴ",
+      "price": 21000,
+      "speed": 5648,
+      "stamina": 5648,
+      "power": 5563,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マスクオフ",
+      "price": 21000,
+      "speed": 5732,
+      "stamina": 5732,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "C"
+    },
+    {
+      "name": "ミスエーニョ",
+      "price": 21000,
+      "speed": 6305,
+      "stamina": 5159,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "ムーチョアンユージュアル",
+      "price": 21000,
+      "speed": 5732,
+      "stamina": 5732,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ラルケット",
+      "price": 21000,
+      "speed": 6305,
+      "stamina": 5159,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "リリサイド",
+      "price": 21000,
+      "speed": 5732,
+      "stamina": 5732,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ヴァルトレルヒェ",
+      "price": 21000,
+      "speed": 5732,
+      "stamina": 5732,
+      "power": 5395,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アンティフォナ",
+      "price": 20000,
+      "speed": 6696,
+      "stamina": 4464,
+      "power": 5497,
+      "dirt": "◎",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "チェッキーノ",
+      "price": 20000,
+      "speed": 5663,
+      "stamina": 5663,
+      "power": 5330,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "チェリーコレクト",
+      "price": 20000,
+      "speed": 5663,
+      "stamina": 5663,
+      "power": 5330,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アンドラステ",
+      "price": 19000,
+      "speed": 6152,
+      "stamina": 5033,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ギフトリスト",
+      "price": 19000,
+      "speed": 5593,
+      "stamina": 5593,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "クロウキャニオン",
+      "price": 19000,
+      "speed": 5033,
+      "stamina": 6152,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シーフロント",
+      "price": 19000,
+      "speed": 5593,
+      "stamina": 5593,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "スペシャルグルーヴ",
+      "price": 19000,
+      "speed": 5510,
+      "stamina": 5510,
+      "power": 5428,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ドバウィハイツ",
+      "price": 19000,
+      "speed": 6152,
+      "stamina": 5033,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "バルドウィナ",
+      "price": 19000,
+      "speed": 6152,
+      "stamina": 5033,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ホロロジスト",
+      "price": 19000,
+      "speed": 6061,
+      "stamina": 4959,
+      "power": 5428,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マイネテレジア",
+      "price": 19000,
+      "speed": 5593,
+      "stamina": 5593,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ミステリーエンジェル",
+      "price": 19000,
+      "speed": 5033,
+      "stamina": 6152,
+      "power": 5264,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ベッラガンバ",
+      "price": 18000,
+      "speed": 5519,
+      "stamina": 5519,
+      "power": 5194,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "モアザンセイクリッド",
+      "price": 18000,
+      "speed": 5519,
+      "stamina": 5519,
+      "power": 5194,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "レッドファンタジア",
+      "price": 18000,
+      "speed": 6071,
+      "stamina": 4967,
+      "power": 5194,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "レディランドルフ",
+      "price": 18000,
+      "speed": 4967,
+      "stamina": 6071,
+      "power": 5194,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "イーヴンソー",
+      "price": 17000,
+      "speed": 5442,
+      "stamina": 5442,
+      "power": 5122,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "キティ",
+      "price": 17000,
+      "speed": 5899,
+      "stamina": 4826,
+      "power": 5282,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "コンドコマンド",
+      "price": 17000,
+      "speed": 5987,
+      "stamina": 4898,
+      "power": 5122,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シロインジャー",
+      "price": 17000,
+      "speed": 5987,
+      "stamina": 4898,
+      "power": 5122,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "A"
+    },
+    {
+      "name": "ネヌファーアズール",
+      "price": 17000,
+      "speed": 4898,
+      "stamina": 5987,
+      "power": 5122,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "リリーオブザヴァレー",
+      "price": 17000,
+      "speed": 5442,
+      "stamina": 5442,
+      "power": 5122,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アクアリング",
+      "price": 16000,
+      "speed": 5363,
+      "stamina": 5363,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "カラフルブラッサム",
+      "price": 16000,
+      "speed": 5363,
+      "stamina": 5363,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サンクイーンII",
+      "price": 16000,
+      "speed": 5899,
+      "stamina": 4826,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "デアリングバード",
+      "price": 16000,
+      "speed": 5899,
+      "stamina": 4826,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "トゥーピー",
+      "price": 16000,
+      "speed": 4826,
+      "stamina": 5899,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ノームコア",
+      "price": 16000,
+      "speed": 5899,
+      "stamina": 4826,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "C"
+    },
+    {
+      "name": "フレンチノワール",
+      "price": 16000,
+      "speed": 6341,
+      "stamina": 4227,
+      "power": 5205,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ブラーリーメモリー",
+      "price": 16000,
+      "speed": 5363,
+      "stamina": 5363,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ライジングクロス",
+      "price": 16000,
+      "speed": 5363,
+      "stamina": 5363,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "リアアントニア",
+      "price": 16000,
+      "speed": 5899,
+      "stamina": 4826,
+      "power": 5047,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "エアルーティーン",
+      "price": 15000,
+      "speed": 5279,
+      "stamina": 5279,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "クラークスデール",
+      "price": 15000,
+      "speed": 5807,
+      "stamina": 4751,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サザンスターズ",
+      "price": 15000,
+      "speed": 5279,
+      "stamina": 5279,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "サマーハ",
+      "price": 15000,
+      "speed": 5279,
+      "stamina": 5279,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シーブリーズライフ",
+      "price": 15000,
+      "speed": 5807,
+      "stamina": 4751,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "スカーレット",
+      "price": 15000,
+      "speed": 5279,
+      "stamina": 5279,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "スキア",
+      "price": 15000,
+      "speed": 4751,
+      "stamina": 5807,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "A"
+    },
+    {
+      "name": "ハウオリ",
+      "price": 15000,
+      "speed": 5807,
+      "stamina": 4751,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "C"
+    },
+    {
+      "name": "ムードインディゴ",
+      "price": 15000,
+      "speed": 4751,
+      "stamina": 5807,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "A"
+    },
+    {
+      "name": "ライラックスアンドレース",
+      "price": 15000,
+      "speed": 5279,
+      "stamina": 5279,
+      "power": 4969,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "C"
+    },
+    {
+      "name": "シンハリーズ",
+      "price": 14000,
+      "speed": 5711,
+      "stamina": 4673,
+      "power": 4887,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ターフドンナ",
+      "price": 14000,
+      "speed": 5795,
+      "stamina": 4742,
+      "power": 4734,
+      "dirt": "△",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "トウカイライフ",
+      "price": 14000,
+      "speed": 5192,
+      "stamina": 5192,
+      "power": 4887,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ブリッツフィナーレ",
+      "price": 14000,
+      "speed": 4673,
+      "stamina": 5711,
+      "power": 4887,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ペンジャ",
+      "price": 14000,
+      "speed": 5192,
+      "stamina": 5192,
+      "power": 4887,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "リトルブック",
+      "price": 14000,
+      "speed": 5192,
+      "stamina": 5192,
+      "power": 4887,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アドマイヤテレサ",
+      "price": 13000,
+      "speed": 4590,
+      "stamina": 5611,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "カルティカ",
+      "price": 13000,
+      "speed": 5100,
+      "stamina": 5100,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ジェンティルドンナ",
+      "price": 13000,
+      "speed": 4590,
+      "stamina": 5611,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ソーマジック",
+      "price": 13000,
+      "speed": 5611,
+      "stamina": 4590,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "トシザコジーン",
+      "price": 13000,
+      "speed": 6121,
+      "stamina": 4080,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "マアム",
+      "price": 13000,
+      "speed": 5025,
+      "stamina": 5025,
+      "power": 4950,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "リッチダンサー",
+      "price": 13000,
+      "speed": 4590,
+      "stamina": 5611,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "C"
+    },
+    {
+      "name": "ロッテンマイヤー",
+      "price": 13000,
+      "speed": 5611,
+      "stamina": 4590,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ロードクロサイト",
+      "price": 13000,
+      "speed": 5100,
+      "stamina": 5100,
+      "power": 4800,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アンナペレンナ",
+      "price": 12000,
+      "speed": 6004,
+      "stamina": 4003,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "キラーグレイシス",
+      "price": 12000,
+      "speed": 5004,
+      "stamina": 5004,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "クロノジェネシス",
+      "price": 12000,
+      "speed": 5004,
+      "stamina": 5004,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "グランアレグリア",
+      "price": 12000,
+      "speed": 5504,
+      "stamina": 4503,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "グルヴェイグ",
+      "price": 12000,
+      "speed": 5004,
+      "stamina": 5004,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ジャポニカーラ",
+      "price": 12000,
+      "speed": 4503,
+      "stamina": 5504,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "スピニングワイルドキャット",
+      "price": 12000,
+      "speed": 6004,
+      "stamina": 4003,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ノーブルステラ",
+      "price": 12000,
+      "speed": 5504,
+      "stamina": 4503,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "C"
+    },
+    {
+      "name": "マシュマロ",
+      "price": 12000,
+      "speed": 4930,
+      "stamina": 4930,
+      "power": 4856,
+      "dirt": "◎",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ラストグルーヴ",
+      "price": 12000,
+      "speed": 5504,
+      "stamina": 4503,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "レズー",
+      "price": 12000,
+      "speed": 6004,
+      "stamina": 4003,
+      "power": 4709,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アンナモンダ",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "カンビーナ",
+      "price": 11000,
+      "speed": 4411,
+      "stamina": 5391,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ココシュニック",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "コスモチェーロ",
+      "price": 11000,
+      "speed": 4411,
+      "stamina": 5391,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サンドラⅡ",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ジョイネヴァーランド",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "セルキス",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ニシノムーンライト",
+      "price": 11000,
+      "speed": 5391,
+      "stamina": 4411,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "A"
+    },
+    {
+      "name": "ブエナビスタ",
+      "price": 11000,
+      "speed": 5391,
+      "stamina": 4411,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "プラウドスペル",
+      "price": 11000,
+      "speed": 5312,
+      "stamina": 4346,
+      "power": 4757,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "プリームス",
+      "price": 11000,
+      "speed": 5312,
+      "stamina": 4346,
+      "power": 4757,
+      "dirt": "◎",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ポルトフィーノ",
+      "price": 11000,
+      "speed": 5391,
+      "stamina": 4411,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "C"
+    },
+    {
+      "name": "マイジェン",
+      "price": 11000,
+      "speed": 5391,
+      "stamina": 4411,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マニーシャ",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マルセリーナ",
+      "price": 11000,
+      "speed": 4411,
+      "stamina": 5391,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ムーンライトダンス",
+      "price": 11000,
+      "speed": 5391,
+      "stamina": 4411,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "モシーン",
+      "price": 11000,
+      "speed": 5391,
+      "stamina": 4411,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "モルガナイト",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ヴィヤダーナ",
+      "price": 11000,
+      "speed": 4901,
+      "stamina": 4901,
+      "power": 4613,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アニメイトバイオ",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "カツラドライバー",
+      "price": 10000,
+      "speed": 5271,
+      "stamina": 4312,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "クイーンピカソ",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サミター",
+      "price": 10000,
+      "speed": 5271,
+      "stamina": 4312,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "サンキューメアリールー",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シーオブラブ",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ステファニーズキトゥン",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ソフィアズソング",
+      "price": 10000,
+      "speed": 5193,
+      "stamina": 4249,
+      "power": 4651,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ハーランズルビー",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "パスオブドリームズ",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "プリティカリーナ",
+      "price": 10000,
+      "speed": 5271,
+      "stamina": 4312,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ベネンシアドール",
+      "price": 10000,
+      "speed": 3890,
+      "stamina": 5835,
+      "power": 4369,
+      "dirt": "△",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "マダムチェロキー",
+      "price": 10000,
+      "speed": 4721,
+      "stamina": 4721,
+      "power": 4651,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マルターズヒート",
+      "price": 10000,
+      "speed": 4792,
+      "stamina": 4792,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "リリーノーブル",
+      "price": 10000,
+      "speed": 5271,
+      "stamina": 4312,
+      "power": 4510,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "タイタンクイーン",
+      "price": 9900,
+      "speed": 5258,
+      "stamina": 4302,
+      "power": 4499,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "マハーバーラタ",
+      "price": 9900,
+      "speed": 4302,
+      "stamina": 5258,
+      "power": 4499,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "オーサムフェザー",
+      "price": 9800,
+      "speed": 5246,
+      "stamina": 4292,
+      "power": 4488,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "エルフィンパーク",
+      "price": 9700,
+      "speed": 5233,
+      "stamina": 4281,
+      "power": 4477,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ミュージカルロマンス",
+      "price": 9700,
+      "speed": 4757,
+      "stamina": 4757,
+      "power": 4477,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ブルーメンブラット",
+      "price": 9600,
+      "speed": 5220,
+      "stamina": 4271,
+      "power": 4466,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ベルベットローブ",
+      "price": 9600,
+      "speed": 5143,
+      "stamina": 4208,
+      "power": 4606,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "テディーズプロミス",
+      "price": 9500,
+      "speed": 4734,
+      "stamina": 4734,
+      "power": 4455,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "ポーレン",
+      "price": 9500,
+      "speed": 4734,
+      "stamina": 4734,
+      "power": 4455,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "エクセレンスII",
+      "price": 9400,
+      "speed": 4722,
+      "stamina": 4722,
+      "power": 4444,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "クーデグレイス",
+      "price": 9400,
+      "speed": 4722,
+      "stamina": 4722,
+      "power": 4444,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ゴールデンドックエー",
+      "price": 9400,
+      "speed": 4722,
+      "stamina": 4722,
+      "power": 4444,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ショウリュウムーン",
+      "price": 9400,
+      "speed": 5194,
+      "stamina": 4250,
+      "power": 4444,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "フォーエヴァービー",
+      "price": 9400,
+      "speed": 4722,
+      "stamina": 4722,
+      "power": 4444,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ムーンライトベイ",
+      "price": 9400,
+      "speed": 5194,
+      "stamina": 4250,
+      "power": 4444,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ムーングロウ",
+      "price": 9300,
+      "speed": 5181,
+      "stamina": 4239,
+      "power": 4433,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "インダクティ",
+      "price": 9200,
+      "speed": 5168,
+      "stamina": 4228,
+      "power": 4422,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "タイムフェアレディ",
+      "price": 9200,
+      "speed": 4767,
+      "stamina": 4767,
+      "power": 4284,
+      "dirt": "△",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ランズエッジ",
+      "price": 9200,
+      "speed": 4698,
+      "stamina": 4698,
+      "power": 4422,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "A"
+    },
+    {
+      "name": "ホットチャチャ",
+      "price": 9100,
+      "speed": 4218,
+      "stamina": 5155,
+      "power": 4411,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "A"
+    },
+    {
+      "name": "ポロンナルワ",
+      "price": 9000,
+      "speed": 5066,
+      "stamina": 4145,
+      "power": 4537,
+      "dirt": "◎",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "コスモクリスタル",
+      "price": 8900,
+      "speed": 5128,
+      "stamina": 4196,
+      "power": 4388,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "レイズアンドコール",
+      "price": 8900,
+      "speed": 5594,
+      "stamina": 3729,
+      "power": 4388,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アメージングムーン",
+      "price": 8800,
+      "speed": 4650,
+      "stamina": 4650,
+      "power": 4376,
+      "dirt": "○",
+      "constitution": "A",
+      "temperament": "B"
+    },
+    {
+      "name": "エーシンクールディ",
+      "price": 8800,
+      "speed": 5115,
+      "stamina": 4185,
+      "power": 4376,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シリアスアティテュード",
+      "price": 8800,
+      "speed": 4185,
+      "stamina": 5115,
+      "power": 4376,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ブルーミンバー",
+      "price": 8700,
+      "speed": 4637,
+      "stamina": 4637,
+      "power": 4364,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "メイショウツバクロ",
+      "price": 8700,
+      "speed": 4637,
+      "stamina": 4637,
+      "power": 4364,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "A"
+    },
+    {
+      "name": "キャプテンガール",
+      "price": 8600,
+      "speed": 5087,
+      "stamina": 4162,
+      "power": 4353,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ホワイトアルバム",
+      "price": 8600,
+      "speed": 4625,
+      "stamina": 4625,
+      "power": 4353,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ヴィーヴァブーケ",
+      "price": 8600,
+      "speed": 4162,
+      "stamina": 5087,
+      "power": 4353,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "インクルードベティ",
+      "price": 8500,
+      "speed": 4612,
+      "stamina": 4612,
+      "power": 4341,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ロザリンド",
+      "price": 8300,
+      "speed": 4128,
+      "stamina": 5045,
+      "power": 4317,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ペンカナプリンセス",
+      "price": 8100,
+      "speed": 4560,
+      "stamina": 4560,
+      "power": 4292,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "アビラ",
+      "price": 8000,
+      "speed": 4929,
+      "stamina": 4032,
+      "power": 4414,
+      "dirt": "◎",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "シャムロッカー",
+      "price": 8000,
+      "speed": 4093,
+      "stamina": 5002,
+      "power": 4280,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "スウィートリーズン",
+      "price": 8000,
+      "speed": 4093,
+      "stamina": 5002,
+      "power": 4280,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "スターペスミツコ",
+      "price": 8000,
+      "speed": 4480,
+      "stamina": 4480,
+      "power": 4414,
+      "dirt": "◎",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ダイヤモンドディーバ",
+      "price": 8000,
+      "speed": 5002,
+      "stamina": 4093,
+      "power": 4280,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ファディラー",
+      "price": 8000,
+      "speed": 4547,
+      "stamina": 4547,
+      "power": 4280,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ブラックエンブレム",
+      "price": 8000,
+      "speed": 4093,
+      "stamina": 5002,
+      "power": 4280,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "レッドエルザ",
+      "price": 8000,
+      "speed": 4547,
+      "stamina": 4547,
+      "power": 4280,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ソベラニア",
+      "price": 7800,
+      "speed": 4521,
+      "stamina": 4521,
+      "power": 4255,
+      "dirt": "○",
+      "constitution": "C",
+      "temperament": "B"
+    },
+    {
+      "name": "ディヴィナプレシオーサ",
+      "price": 7800,
+      "speed": 4521,
+      "stamina": 4521,
+      "power": 4255,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ラスティングソング",
+      "price": 7700,
+      "speed": 4507,
+      "stamina": 4507,
+      "power": 4242,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    },
+    {
+      "name": "ジョイヴェリカ",
+      "price": 7600,
+      "speed": 4493,
+      "stamina": 4493,
+      "power": 4229,
+      "dirt": "○",
+      "constitution": "B",
+      "temperament": "B"
+    }
+  ]
+}
