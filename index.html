@@ -2,8 +2,8 @@
 :root{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#20212a;background:#f5f6fa}*{box-sizing:border-box}body{margin:0}.wrap{max-width:1080px;margin:auto;padding:18px 12px 60px}h1{font-size:23px;margin:0 0 6px}h2{font-size:17px;margin:0}.muted{color:#667085;font-size:12px}.panel{background:white;border:1px solid #e4e7ec;border-radius:14px;padding:15px;margin:12px 0;box-shadow:0 1px 3px #1018280b}.flex{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.between{justify-content:space-between}button,input,select{font:inherit}button{border:1px solid #d0d5dd;border-radius:9px;background:white;padding:9px 12px;cursor:pointer}button.primary{background:#4338ca;color:white;border-color:#4338ca}button.danger{color:#b42318}button:disabled{opacity:.4;cursor:not-allowed}input,select{border:1px solid #d0d5dd;border-radius:8px;padding:9px;background:white;min-width:0}input[type=number]{width:94px}input[type=text]{width:150px}.bar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{background:#f8f8fc;border-radius:10px;padding:10px;text-align:center}.stat b{display:block;font-size:23px}.tablewrap{overflow-x:auto}.data{width:100%;border-collapse:collapse;min-width:820px}.data th,.data td{border-bottom:1px solid #eaecf0;padding:9px 6px;text-align:center;white-space:nowrap}.data th:first-child,.data td:first-child{text-align:left}.data th{font-size:12px;color:#667085}.horse{font-weight:700}.mark{font-size:21px;font-weight:700}.m5{color:#8542c8}.m4{color:#d34b4b}.m3{color:#3478c0}.m2{color:#368b55}.m1{color:#936b42}.badge{font-size:11px;border-radius:20px;padding:4px 7px;background:#f2f4f7}.ok{background:#e7f5eb;color:#166534}.warn{background:#fff3dc;color:#92400e}.actions button{padding:6px 9px}.editor{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.editor label{font-size:12px;display:block}.editor select{width:100%;padding:8px 2px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.fields label{display:block;font-size:12px;margin-bottom:4px}.fields input,.fields select{width:100%}.note{background:#f8f8fc;padding:10px;border-radius:9px;font-size:13px}.hide{display:none}.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.compare>div{border:1px solid #eaecf0;border-radius:10px;padding:10px}.small{font-size:12px}footer{color:#667085;font-size:12px;margin-top:20px} @media(min-width:720px){.fields{grid-template-columns:repeat(4,minmax(0,1fr))}.bar{max-width:500px}}@media(max-width:400px){.wrap{padding:12px 8px}.panel{padding:12px}.editor{gap:3px}.editor select{font-size:12px}}
 </style><style>
 .scanGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}.scanGrid>div{text-align:center;font-size:12px}.scanGrid canvas{width:100%;max-width:80px;border:1px solid #ddd;border-radius:6px}.scanGrid select{width:100%;padding:5px 0;font-size:12px}.scanNote{font-size:12px;color:#667085}.scanPreview{width:100%;max-height:300px;object-fit:contain;border-radius:8px;background:#eee}.scanAdjust{display:flex;flex-wrap:wrap;gap:10px}.scanAdjust label{font-size:12px}.scanAdjust input{width:105px}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v2.7｜プログラム v2.7｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
-<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（認識改善・試作 v2.7）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v2.8｜プログラム v2.8｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（認識改善・試作 v2.8）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
 <p class="scanNote">テレビ画面を撮影した写真を選択します。今回のサンプルと近い構図で、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><img id="scanPreview" class="scanPreview hide" alt="選択した画像">
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
@@ -62,16 +62,24 @@ $('ocrStatus').textContent='日本語OCRを準備しています（初回は時�
 // Reference layout is a photographed 4:3 game screen; all coordinates scale with the photo.
 const regions=[['ocrName',[93,300,355,64]],['ocrSire',[272,814,220,52]],['ocrDam',[495,814,245,52]]];
 for(const [id,rect] of regions){$('ocrStatus').textContent=id==='ocrName'?'馬名を読み取り中…':id==='ocrSire'?'父馬を読み取り中…':'母馬を読み取り中…';const result=await ocrWorker.recognize(cropOCR(photo,rect));let value=cleanOCR(result.data.text);if(id==='ocrName')value=value.replace(/^[馬名:：]+/,'');$(id).value=value;}
-// Read sex from the fixed upper-left '牡2' / '牝2' field; never guess on ambiguity.
-$('ocrStatus').textContent='性別を読み取り中…';
-const sexResult=await ocrWorker.recognize(cropOCR(photo,[75,354,170,54]));
-const sexText=cleanOCR(sexResult.data.text);
-const male=/牡/.test(sexText),female=/牝/.test(sexText);
-$('ocrSex').value=male&&!female?'牡':female&&!male?'牝':'';
-if(!$('ocrSex').value)$('ocrStatus').textContent='性別を判定できませんでした。牡・牝を手動で選んでください。';
+// v2.8: Sex is printed below the horse name as 牡2 / 牝2.
+// Try both the full field and a tighter crop. Only accept a single unambiguous sex.
+$('ocrStatus').textContent='性別を読み取り中（拡大・再確認）…';
+const sexRegions=[[75,354,170,54],[94,361,100,39],[70,345,210,75]];
+const sexVotes=[];
+for(const rect of sexRegions){
+  const r=await ocrWorker.recognize(cropOCR(photo,rect));
+  const t=cleanOCR(r.data.text);
+  const male=/牡/.test(t),female=/牝/.test(t);
+  if(male!==female)sexVotes.push(male?'牡':'牝');
+}
+const maleVotes=sexVotes.filter(v=>v==='牡').length;
+const femaleVotes=sexVotes.filter(v=>v==='牝').length;
+$('ocrSex').value=maleVotes>0&&femaleVotes===0?'牡':femaleVotes>0&&maleVotes===0?'牝':'';
+const sexNotice=$('ocrSex').value?'性別「'+$('ocrSex').value+'」を推定しました。ゲーム画面と照合してください。':'性別は判定保留です。画像の「牡2／牝2」を確認して手動で選んでください。';
 // Fall back to the common unnamed-foal pattern only if the dam field was not recognized.
 if(!$('ocrDam').value){const m=$('ocrName').value.match(/^(.+?)の[0-9０-９]{2}$/);if(m)$('ocrDam').value=m[1]}
-$('ocrStatus').textContent='文字認識が完了しました。馬名の先頭記号を除去しました。父母は名簿との照合も使い、誤字・能力印を必ず確認してください。';
+$('ocrStatus').textContent='文字認識が完了しました。'+sexNotice+' 馬名・父母の誤字と能力印も必ず確認してください。';
 }catch(e){$('ocrStatus').textContent='文字認識に失敗しました：'+(e.message||e)+'。手入力で補ってください。';}finally{ocrBusy=false;$('ocrRun').disabled=false}};
 
 Promise.all(Object.entries(templates).map(async ([k,v])=>{const im=await imageLoad('data:image/png;base64,'+v);const c=document.createElement('canvas');c.width=32;c.height=32;c.getContext('2d').drawImage(im,0,0);ref[k]=bits(c)})).catch(()=>{});
