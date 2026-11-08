@@ -2,8 +2,8 @@
 :root{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#20212a;background:#f5f6fa}*{box-sizing:border-box}body{margin:0}.wrap{max-width:1080px;margin:auto;padding:18px 12px 60px}h1{font-size:23px;margin:0 0 6px}h2{font-size:17px;margin:0}.muted{color:#667085;font-size:12px}.panel{background:white;border:1px solid #e4e7ec;border-radius:14px;padding:15px;margin:12px 0;box-shadow:0 1px 3px #1018280b}.flex{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.between{justify-content:space-between}button,input,select{font:inherit}button{border:1px solid #d0d5dd;border-radius:9px;background:white;padding:9px 12px;cursor:pointer}button.primary{background:#4338ca;color:white;border-color:#4338ca}button.danger{color:#b42318}button:disabled{opacity:.4;cursor:not-allowed}input,select{border:1px solid #d0d5dd;border-radius:8px;padding:9px;background:white;min-width:0}input[type=number]{width:94px}input[type=text]{width:150px}.bar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{background:#f8f8fc;border-radius:10px;padding:10px;text-align:center}.stat b{display:block;font-size:23px}.tablewrap{overflow-x:auto}.data{width:100%;border-collapse:collapse;min-width:820px}.data th,.data td{border-bottom:1px solid #eaecf0;padding:9px 6px;text-align:center;white-space:nowrap}.data th:first-child,.data td:first-child{text-align:left}.data th{font-size:12px;color:#667085}.horse{font-weight:700}.mark{font-size:21px;font-weight:700}.m5{color:#8542c8}.m4{color:#d34b4b}.m3{color:#3478c0}.m2{color:#368b55}.m1{color:#936b42}.badge{font-size:11px;border-radius:20px;padding:4px 7px;background:#f2f4f7}.ok{background:#e7f5eb;color:#166534}.warn{background:#fff3dc;color:#92400e}.actions button{padding:6px 9px}.editor{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.editor label{font-size:12px;display:block}.editor select{width:100%;padding:8px 2px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.fields label{display:block;font-size:12px;margin-bottom:4px}.fields input,.fields select{width:100%}.note{background:#f8f8fc;padding:10px;border-radius:9px;font-size:13px}.hide{display:none}.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.compare>div{border:1px solid #eaecf0;border-radius:10px;padding:10px}.small{font-size:12px}footer{color:#667085;font-size:12px;margin-top:20px} @media(min-width:720px){.fields{grid-template-columns:repeat(4,minmax(0,1fr))}.bar{max-width:500px}}@media(max-width:400px){.wrap{padding:12px 8px}.panel{padding:12px}.editor{gap:3px}.editor select{font-size:12px}}
 </style><style>
 .scanGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}.scanGrid>div{text-align:center;font-size:12px}.scanGrid canvas{width:100%;max-width:80px;border:1px solid #ddd;border-radius:6px}.scanGrid select{width:100%;padding:5px 0;font-size:12px}.scanNote{font-size:12px;color:#667085}.scanPreview{width:100%;max-height:300px;object-fit:contain;border-radius:8px;background:#eee}.scanAdjust{display:flex;flex-wrap:wrap;gap:10px}.scanAdjust label{font-size:12px}.scanAdjust input{width:105px}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v2.9｜プログラム v2.9｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
-<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（認識改善・試作 v2.9）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v3.0｜プログラム v3.0｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（認識改善・試作 v3.0）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
 <p class="scanNote">テレビ画面を撮影した写真を選択します。今回のサンプルと近い構図で、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><img id="scanPreview" class="scanPreview hide" alt="選択した画像">
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
@@ -76,8 +76,41 @@ function classifyDetail(c){const b=bits(c);const results=Object.entries(ref).map
  return {value:'',note:`候補 ${symScan(best.key)} / ${symScan(second.key)}：判定が近いため未確定`};
 }return {value:best.key,note:`推定 ${symScan(best.key)}（要確認）`}}
 function symScan(k){return ({'5':'◉','4':'◎','3':'○','2':'△','1':'×'})[k]||'?'}
+// v3.0: Compare same-photo circle shapes, without assuming SP is always ○.
+// A reference is accepted only when its initial classification is unambiguous.
+function circleSignature(c){
+ const d=c.getContext('2d',{willReadFrequently:true}).getImageData(0,0,32,32).data;
+ const lum=(x,y)=>{const i=(y*32+x)*4;return .299*d[i]+.587*d[i+1]+.114*d[i+2]};
+ const sig=[];
+ for(let r=3;r<=14;r++){
+  let values=[];
+  for(let a=0;a<32;a++){let t=a*Math.PI/16,x=Math.max(0,Math.min(31,Math.round(15.5+Math.cos(t)*r))),y=Math.max(0,Math.min(31,Math.round(15.5+Math.sin(t)*r)));values.push(lum(x,y))}
+  values.sort((a,b)=>a-b);
+  sig.push(values[Math.floor(values.length*.3)]);
+ }
+ const min=Math.min(...sig),max=Math.max(...sig);
+ if(max-min<32)return null;
+ return sig.map(v=>(max-v)/(max-min));
+}
+function signatureDistance(a,b){return a.reduce((sum,v,i)=>sum+Math.abs(v-b[i]),0)/a.length}
+function scanGroup(crops){
+ const initial=crops.map(classifyDetail), signatures=crops.map(circleSignature);
+ const refs={3:[],4:[]};
+ initial.forEach((r,i)=>{if((r.value==='3'||r.value==='4')&&signatures[i]&&!r.note.includes('輪郭再検査'))refs[r.value].push(signatures[i])});
+ return initial.map((r,i)=>{
+  if(r.value||!signatures[i]||!refs[3].length||!refs[4].length)return r;
+  if(!r.note.includes('候補 ○ / ◎')&&!r.note.includes('候補 ◎ / ○'))return r;
+  const dist=k=>Math.min(...refs[k].map(ref=>signatureDistance(signatures[i],ref)));
+  const d3=dist(3),d4=dist(4);
+  // Require both absolute similarity and a meaningful gap; otherwise retain ?.
+  if(Math.min(d3,d4)>.16||Math.abs(d3-d4)<.045)return {...r,note:r.note+'（同一画像比較でも保留）'};
+  const value=d3<d4?'3':'4';
+  return {value,note:'推定 '+symScan(value)+'（同一画像の○・◎と比較／要確認）'};
+ });
+}
 function classify(c){return classifyDetail(c).value}
-function scan(){if(!photo)return;const grid=$('scanGrid');grid.innerHTML='';const dx=Number($('scanX').value),dy=Number($('scanY').value);['SP','ST','PW','根性','気性'].forEach((name,i)=>{const c=patch(photo,centers[i]+dx,CY+dy);const col=document.createElement('div');const label=document.createElement('div');label.textContent=name;const display=document.createElement('canvas');display.width=64;display.height=64;display.getContext('2d').drawImage(c,0,0,64,64);const sel=document.createElement('select');sel.innerHTML=options;const result=classifyDetail(c);sel.value=result.value;const hint=document.createElement('div');hint.className='scanNote';hint.style.cssText='font-size:10px;line-height:1.3;margin-top:4px';hint.textContent=result.note;col.append(label,display,sel,hint);grid.append(col)});$('scanStatus').textContent='類似した印は「？」で保留します。5項目の画像と選択値を必ず確認してください。'}
+function scan(){if(!photo)return;const grid=$('scanGrid');grid.innerHTML='';const dx=Number($('scanX').value),dy=Number($('scanY').value);const crops=centers.map(x=>patch(photo,x+dx,CY+dy));const results=scanGroup(crops);['SP','ST','PW','根性','気性'].forEach((name,i)=>{const c=crops[i];const col=document.createElement('div');const label=document.createElement('div');label.textContent=name;const display=document.createElement('canvas');display.width=64;display.height=64;display.getContext('2d').drawImage(c,0,0,64,64);const sel=document.createElement('select');sel.innerHTML=options;const result=results[i];sel.value=result.value;const hint=document.createElement('div');hint.className='scanNote';hint.style.cssText='font-size:10px;line-height:1.3;margin-top:4px';hint.textContent=result.note;col.append(label,display,sel,hint);grid.append(col)});$('scanStatus').textContent='v3.0：同じ写真の○・◎を比較します。曖昧な印は「？」で保留。5項目を必ず目視確認してください。'}
+
 $('scanFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const url=URL.createObjectURL(f);const im=await imageLoad(url);photo=im;$('scanPreview').src=url;$('scanPreview').classList.remove('hide');$('scanResult').classList.remove('hide');$('scanX').value=0;$('scanY').value=0;['ocrName','ocrSire','ocrDam','ocrSex'].forEach(id=>$(id).value='');$('ocrStatus').textContent='画像を選択しました。「文字を読み取る」を押してください。';scan()}catch(err){alert('画像を読み込めませんでした')} });
 $('scanRetry').onclick=scan;$('scanX').onchange=scan;$('scanY').onchange=scan;
 $('scanApply').onclick=()=>{const vals=[...$('scanGrid').querySelectorAll('select')].map(x=>x.value);vals.forEach((v,i)=>{const target=$('m'+i);if(target)target.value=v});[['ocrName','name'],['ocrSire','sire'],['ocrDam','dam'],['ocrSex','sex']].forEach(([from,to])=>{const v=$(from).value.trim();if(v)$(to).value=v});$('scanStatus').textContent='確認した項目を入力欄へ反映しました。内容を確認して登録してください。';document.getElementById('horseform').scrollIntoView({behavior:'smooth',block:'center'})};
