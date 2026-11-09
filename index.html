@@ -5,11 +5,11 @@
 .scanGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}.scanGrid>div{text-align:center;font-size:12px}.scanGrid canvas{width:100%;max-width:80px;border:1px solid #ddd;border-radius:6px}.scanGrid select{width:100%;padding:5px 0;font-size:12px}.scanNote{font-size:12px;color:#667085}.scanPreview{width:100%;max-height:420px;object-fit:contain;border-radius:8px;background:#eee;display:block}.scanPhotoWrap{position:relative;display:inline-block;width:100%;touch-action:manipulation}.scanPin{position:absolute;transform:translate(-50%,-50%);background:#4538d4;color:white;border:2px solid white;border-radius:50%;font-size:12px;font-weight:bold;padding:3px 6px;pointer-events:none;box-shadow:0 1px 5px #2229}.scanAdjust{display:flex;flex-wrap:wrap;gap:10px}.scanAdjust label{font-size:12px}.scanAdjust input{width:105px}
 </style><style>
 .management-panel>h2{display:none}.management-panel>summary{font-weight:750;font-size:17px;cursor:pointer;list-style-position:inside;padding:3px 0}.management-panel[open]>summary{padding-bottom:12px;border-bottom:1px solid #eaecf0;margin-bottom:12px}.reference-box{margin-top:12px;padding:10px 7px 4px;border-top:1px solid #eaecf0;background:#f8f9fc;border-radius:8px;font-size:13px}.reference-box>b{display:block;color:#667085;font-size:12px;margin-bottom:7px}.reference-box .flex{align-items:flex-start;gap:5px;padding:3px 0}.reference-value{max-width:68%;text-align:right;overflow-wrap:anywhere}.management-panel{margin-top:12px}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.0｜プログラム v4.0｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.1｜プログラム v4.1｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
 <section class="panel" id="generationPanel"><div class="flex between"><h2>世代の選択</h2><span class="muted">西暦4桁・年表示</span></div><div class="flex" style="margin-top:12px"><label>世代 <select id="generation"></select></label><span class="muted">選択した世代の幼駒を表示</span></div></section>
 <section class="panel"><div class="bar"><div class="stat"><b id="count">0/24</b><span class="muted">登録頭数</span></div><div class="stat"><b id="gi">0</b><span class="muted">GⅠ候補</span></div><div class="stat"><b id="kept">0</b><span class="muted">確保指定</span></div></div></section>
 <section class="panel" id="auditPanel"><div class="flex between"><h2>🩺 データ確認・未処理アラーム</h2><button type="button" id="auditRefresh">再チェック</button></div><p class="muted">内部父母マスターとの対応・入力漏れを検査します。外部DB未照合だけでは警告しません。</p><div class="flex" style="margin:10px 0"><label class="small">検査範囲 <select id="auditScope"><option value="current">現在の世代</option><option value="all">全世代</option></select></label></div><div id="auditResults" aria-live="polite"></div></section>
-<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（画面位置自動検出 v4.0）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
+<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（画面位置自動検出 v4.1）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
 <p class="scanNote">テレビ画面を撮影した写真を選択します。ゲーム画面の緑色の見出しを手掛かりに表示位置を推定し、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><div class="scanPhotoWrap" id="scanPhotoWrap"><img id="scanPreview" class="scanPreview hide" alt="選択した画像"><div id="scanPins"></div></div>
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
@@ -247,8 +247,38 @@ $('ocrStatus').textContent='日本語OCRを準備しています（初回は時�
 // Reference layout is a photographed 4:3 game screen; all coordinates scale with the photo.
 // Position all text regions relative to the detected green header.
 // 父・母: 競走成績の誕生行に表示される2つの馬名。
-const regions=[['ocrName',[75,75,315,48]],['ocrSire',[275,532,120,42]],['ocrDam',[402,532,185,42]]];
-for(const [id,rect] of regions){$('ocrStatus').textContent=id==='ocrName'?'馬名を読み取り中…':id==='ocrSire'?'父馬を読み取り中…':'母馬を読み取り中…';const result=await ocrWorker.recognize(cropDetected(photo,relativeRect(screenAnchor,rect)));let value=cleanOCR(result.data.text);if(id==='ocrName')value=value.replace(/^[馬名:：]+/,'');$(id).value=value;}
+const nameResult=await ocrWorker.recognize(cropDetected(photo,relativeRect(screenAnchor,[75,75,315,48])));
+$('ocrName').value=cleanOCR(nameResult.data.text).replace(/^[馬名:：]+/,'');
+// v4.1: Read the entire birth row first. Find a two-digit game year (or 年)
+// and 誕生 on the SAME row, rather than OCR two hard-coded parent rectangles.
+// The reference row is ~540 px below the detected 育成馬 header.
+$('ocrStatus').textContent='競走成績の誕生行を探しています…';
+const birthRowRect=relativeRect(screenAnchor,[0,515,900,78]);
+const birthRowImage=cropDetected(photo,birthRowRect);
+const birthResult=await ocrWorker.recognize(birthRowImage);
+const birthText=String(birthResult.data.text||'').replace(/　/g,' ');
+const birthLines=birthText.split(/\n/).map(x=>x.trim()).filter(Boolean);
+const yearRe=/[0-9０-９]{2}\s*年|年/;
+const birthLine=birthLines.find(line=>yearRe.test(line)&&/誕生/.test(line));
+let parentNotice='';
+if(birthLine){
+  const between=birthLine.slice(birthLine.search(yearRe)).replace(yearRe,'').split('誕生')[0]
+    .replace(/^[\s|｜:：・]+|[\s|｜:：・]+$/g,'').trim();
+  // The two names are separated by a space on the game's birth row.
+  // Use existing registered names as additional boundary candidates; never guess.
+  const names=[...new Set([...(typeof internalSires!=='undefined'?internalSires:[]),...(typeof internalDams!=='undefined'?internalDams:[])].map(x=>typeof x==='string'?x:x?.name).filter(Boolean))];
+  const tokens=between.split(/[\s　]+/).filter(Boolean);
+  let pair=tokens.length===2?tokens:null;
+  if(!pair){
+    const matches=names.filter(n=>between.includes(n)).sort((a,b)=>b.length-a.length);
+    const first=matches.find(n=>between.startsWith(n));
+    if(first){const rest=between.slice(first.length).trim();if(rest&&names.includes(rest))pair=[first,rest]}
+  }
+  if(pair){$('ocrSire').value=cleanOCR(pair[0]);$('ocrDam').value=cleanOCR(pair[1]);parentNotice=' 父母名は誕生行から抽出しました。'}
+  else{parentNotice=' 誕生行は検出しましたが父母名の分割は未確定です。手入力してください。'}
+}else{
+  parentNotice=' 「数字2桁＋年（または年）」と「誕生」を同じ行で確認できず、父母名は保留しました。';
+}
 // v2.8: Sex is printed below the horse name as 牡2 / 牝2.
 // Try both the full field and a tighter crop. Only accept a single unambiguous sex.
 $('ocrStatus').textContent='性別を読み取り中（拡大・再確認）…';
@@ -272,7 +302,7 @@ const growthNotice=$('ocrGrowth').value?' 成長型「'+$('ocrGrowth').value+'�
 const sexNotice=$('ocrSex').value?'性別「'+$('ocrSex').value+'」を推定しました。ゲーム画面と照合してください。':'性別は判定保留です。画像の「牡2／牝2」を確認して手動で選んでください。';
 // Fall back to the common unnamed-foal pattern only if the dam field was not recognized.
 // Unreadable parent names stay blank; never infer them from a foal nickname.
-$('ocrStatus').textContent='文字認識が完了しました。'+sexNotice+growthNotice+' 馬名・父母の誤字と能力印も必ず確認してください。';
+$('ocrStatus').textContent='文字認識が完了しました。'+sexNotice+growthNotice+parentNotice+' 馬名・父母の誤字と能力印も必ず確認してください。';
 }catch(e){$('ocrStatus').textContent='文字認識に失敗しました：'+(e.message||e)+'。手入力で補ってください。';}finally{ocrBusy=false;$('ocrRun').disabled=false}};
 
 Promise.all(Object.entries(templates).map(async ([k,v])=>{const im=await imageLoad('data:image/png;base64,'+v);const c=document.createElement('canvas');c.width=32;c.height=32;c.getContext('2d').drawImage(im,0,0);ref[k]=bits(c)})).catch(()=>{});
