@@ -5,7 +5,7 @@
 .scanGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}.scanGrid>div{text-align:center;font-size:12px}.scanGrid canvas{width:100%;max-width:80px;border:1px solid #ddd;border-radius:6px}.scanGrid select{width:100%;padding:5px 0;font-size:12px}.scanNote{font-size:12px;color:#667085}.scanPreview{width:100%;max-height:420px;object-fit:contain;border-radius:8px;background:#eee;display:block}.scanPhotoWrap{position:relative;display:inline-block;width:100%;touch-action:manipulation}.scanPin{position:absolute;transform:translate(-50%,-50%);background:#4538d4;color:white;border:2px solid white;border-radius:50%;font-size:12px;font-weight:bold;padding:3px 6px;pointer-events:none;box-shadow:0 1px 5px #2229}.scanAdjust{display:flex;flex-wrap:wrap;gap:10px}.scanAdjust label{font-size:12px}.scanAdjust input{width:105px}
 </style><style>
 .management-panel>h2{display:none}.management-panel>summary{font-weight:750;font-size:17px;cursor:pointer;list-style-position:inside;padding:3px 0}.management-panel[open]>summary{padding-bottom:12px;border-bottom:1px solid #eaecf0;margin-bottom:12px}.reference-box{margin-top:12px;padding:10px 7px 4px;border-top:1px solid #eaecf0;background:#f8f9fc;border-radius:8px;font-size:13px}.reference-box>b{display:block;color:#667085;font-size:12px;margin-bottom:7px}.reference-box .flex{align-items:flex-start;gap:5px;padding:3px 0}.reference-value{max-width:68%;text-align:right;overflow-wrap:anywhere}.management-panel{margin-top:12px}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v3.8｜プログラム v3.8｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v3.9｜プログラム v3.9｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
 <section class="panel" id="generationPanel"><div class="flex between"><h2>世代の選択</h2><span class="muted">西暦4桁・年表示</span></div><div class="flex" style="margin-top:12px"><label>世代 <select id="generation"></select></label><span class="muted">選択した世代の幼駒を表示</span></div></section>
 <section class="panel"><div class="bar"><div class="stat"><b id="count">0/24</b><span class="muted">登録頭数</span></div><div class="stat"><b id="gi">0</b><span class="muted">GⅠ候補</span></div><div class="stat"><b id="kept">0</b><span class="muted">確保指定</span></div></div></section>
 <section class="panel" id="auditPanel"><div class="flex between"><h2>🩺 データ確認・未処理アラーム</h2><button type="button" id="auditRefresh">再チェック</button></div><p class="muted">内部父母マスターとの対応・入力漏れを検査します。外部DB未照合だけでは警告しません。</p><div class="flex" style="margin:10px 0"><label class="small">検査範囲 <select id="auditScope"><option value="current">現在の世代</option><option value="all">全世代</option></select></label></div><div id="auditResults" aria-live="polite"></div></section>
@@ -13,7 +13,7 @@
 <p class="scanNote">テレビ画面を撮影した写真を選択します。今回のサンプルと近い構図で、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><div class="scanPhotoWrap" id="scanPhotoWrap"><img id="scanPreview" class="scanPreview hide" alt="選択した画像"><div id="scanPins"></div></div>
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
-<div style="margin:12px 0;padding:12px;background:#f4f3ff;border-radius:10px;border:1px solid #d6d0ff"><strong>📍 能力印の位置を写真で指定（推奨）</strong><p class="scanNote" style="margin:6px 0">撮影位置が変わった場合、下の「位置指定を開始」を押し、上の写真で <b>SP → ST → PW → 根性 → 気性</b> の印の中心を順番にタップしてください。5個指定すると再判定します。誤った場所を押した場合は「やり直し」。</p><div class="flex" style="gap:8px;flex-wrap:wrap"><button id="scanManualStart" type="button">位置指定を開始</button><button id="scanManualReset" type="button">やり直し・自動位置へ</button></div><div id="scanManualStatus" class="scanNote" role="status" style="margin-top:7px">撮影位置が合わない場合に使用してください。</div></div><div class="scanAdjust"><label>左右位置 <input id="scanX" type="range" min="-140" max="140" value="0"></label><label>上下位置 <input id="scanY" type="range" min="-140" max="140" value="0"></label><button id="scanRetry" type="button">再判定</button></div>
+<div style="margin:12px 0;padding:12px;background:#f4f3ff;border-radius:10px;border:1px solid #d6d0ff"><strong>📍 能力印の位置を写真で指定（推奨）</strong><p class="scanNote" style="margin:6px 0">撮影位置が変わった場合、下の「位置指定を開始」を押し、上の写真で <b>SP → ST → PW → 根性 → 気性</b> の印の中心を順番にタップしてください。5個指定すると、タップ周辺から円形の印を探して中心を補正します。少しずれたタップでも構いません。誤った場所を押した場合は「やり直し」。</p><div class="flex" style="gap:8px;flex-wrap:wrap"><button id="scanManualStart" type="button">位置指定を開始</button><button id="scanManualReset" type="button">やり直し・自動位置へ</button></div><div id="scanManualStatus" class="scanNote" role="status" style="margin-top:7px">撮影位置が合わない場合に使用してください。</div></div><div class="scanAdjust"><label>左右位置 <input id="scanX" type="range" min="-140" max="140" value="0"></label><label>上下位置 <input id="scanY" type="range" min="-140" max="140" value="0"></label><button id="scanRetry" type="button">再判定</button></div>
 <div class="scanGrid" id="scanGrid"></div>
 <div style="border:1px solid #e4e7ec;border-radius:10px;padding:12px;margin:12px 0">
 <div class="flex between"><strong>馬名・性別・成長型・父馬・母馬（OCR試作）</strong><button type="button" id="ocrRun">文字を読み取る（固定位置・試験）</button></div>
@@ -56,11 +56,66 @@ function imageLoad(src){return new Promise((resolve,reject)=>{const im=new Image
 function patch(img,x,y){const c=document.createElement('canvas');c.width=32;c.height=32;const ctx=c.getContext('2d',{willReadFrequently:true});const sx=img.naturalWidth/sampleWidth,sy=img.naturalHeight/sampleHeight;ctx.drawImage(img,(x-21)*sx,(y-21)*sy,42*sx,42*sy,0,0,32,32);return c}
 let manualPoints=[],manualActive=false;
 const markNames=['SP','ST','PW','根性','気性'];
-function naturalPatch(img,x,y){const c=document.createElement('canvas');c.width=32;c.height=32;const ctx=c.getContext('2d',{willReadFrequently:true});const radius=Math.max(9,Math.round(img.naturalWidth*.0135));ctx.drawImage(img,x-radius,y-radius,radius*2,radius*2,0,0,32,32);return c}
+// v3.9: use a source-resolution image and a local circular-edge search.
+// The search is deliberately conservative: uncertain candidates remain manual '?' inputs.
+let scanSource=null,scanRefinements=[];
+function scanPixels(img){
+ const maxW=1300,scale=Math.min(1,maxW/img.naturalWidth),w=Math.round(img.naturalWidth*scale),h=Math.round(img.naturalHeight*scale);
+ const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0,w,h);
+ const d=ctx.getImageData(0,0,w,h).data,gray=new Float32Array(w*h);
+ for(let i=0,j=0;i<d.length;i+=4,j++)gray[j]=.299*d[i]+.587*d[i+1]+.114*d[i+2];
+ return {w,h,scale,gray};
+}
+function ringSearch(px,x,y){
+ const {w,h,scale,gray}=px,cx=x*scale,cy=y*scale;
+ const sample=(xx,yy)=>{const a=Math.round(xx),b=Math.round(yy);return a<1||b<1||a>=w-1||b>=h-1?null:gray[b*w+a]};
+ // Typical printed circles are small; try multiple radii and allow a finger-size error.
+ const minR=Math.max(3,w*.0038),maxR=Math.max(minR+2,w*.0105),step=Math.max(1,w*.001);
+ const search=Math.max(9,Math.min(31,w*.026));
+ let best=null,runner=null;
+ for(let dy=-search;dy<=search;dy+=2)for(let dx=-search;dx<=search;dx+=2){
+  if(dx*dx+dy*dy>search*search)continue;
+  const xx=cx+dx,yy=cy+dy;
+  for(let r=minR;r<=maxR;r+=step){
+   let contrast=0,variance=0,values=[];
+   for(let k=0;k<16;k++){
+    const a=k*Math.PI/8,ux=Math.cos(a),uy=Math.sin(a);
+    const inner=sample(xx+ux*r*.63,yy+uy*r*.63),edge=sample(xx+ux*r,yy+uy*r),outer=sample(xx+ux*r*1.42,yy+uy*r*1.42);
+    if(inner===null||edge===null||outer===null){values=[];break}
+    const v=(inner+outer)*.5-edge;values.push(v);contrast+=v;
+   }
+   if(values.length!==16)continue;
+   const avg=contrast/16;
+   if(avg<18)continue;
+   const positive=values.filter(v=>v>12).length;
+   if(positive<12)continue;
+   variance=Math.sqrt(values.reduce((sum,v)=>sum+(v-avg)**2,0)/16);
+   const score=avg-variance*.50-Math.hypot(dx,dy)*.12;
+   const hit={x:xx/scale,y:yy/scale,r:r/scale,score,positive};
+   if(!best||score>best.score){runner=best;best=hit}
+   else if(!runner||score>runner.score)runner=hit;
+  }
+ }
+ // A detected ring must be well contrasted and fairly circular; otherwise do not force it.
+ if(!best||best.score<22||best.positive<13)return null;
+ return best;
+}
+function naturalPatch(img,x,y,radius){const c=document.createElement('canvas');c.width=32;c.height=32;const ctx=c.getContext('2d',{willReadFrequently:true});
+ const rad=radius||Math.max(9,Math.round(img.naturalWidth*.011));
+ ctx.drawImage(img,x-rad,y-rad,rad*2,rad*2,0,0,32,32);return c}
+function manualCrops(){
+ scanRefinements=[];
+ const px=scanSource||(scanSource=scanPixels(photo));
+ return manualPoints.map(([x,y])=>{
+  const hit=ringSearch(px,x,y);
+  scanRefinements.push(hit);
+  return hit?naturalPatch(photo,hit.x,hit.y,Math.max(9,hit.r*1.85)):naturalPatch(photo,x,y);
+ });
+}
 function updateManualPins(){const root=$('scanPins');if(!root)return;root.innerHTML='';const im=$('scanPreview');const box=im.getBoundingClientRect();const scale=Math.min(box.width/photo.naturalWidth,420/photo.naturalHeight);const w=photo.naturalWidth*scale,h=photo.naturalHeight*scale;const left=(box.width-w)/2,top=(box.height-h)/2;manualPoints.forEach(([x,y],i)=>{const el=document.createElement('span');el.className='scanPin';el.textContent=markNames[i];el.style.left=(left+x*scale)+'px';el.style.top=(top+y*scale)+'px';root.append(el)})}
 $('scanManualStart').onclick=()=>{if(!photo){alert('先に写真を選択してください');return}manualPoints=[];manualActive=true;$('scanManualStatus').textContent='写真内のSPの印の中心をタップしてください（1/5）';updateManualPins()};
 $('scanManualReset').onclick=()=>{manualPoints=[];manualActive=false;$('scanManualStatus').textContent='位置指定を解除しました。従来の自動位置で判定します。';updateManualPins();scan()};
-$('scanPreview').addEventListener('click',e=>{if(!manualActive||!photo)return;const rect=e.currentTarget.getBoundingClientRect();const scale=Math.min(rect.width/photo.naturalWidth,420/photo.naturalHeight);const w=photo.naturalWidth*scale,h=photo.naturalHeight*scale;const left=(rect.width-w)/2,top=(rect.height-h)/2;const x=(e.clientX-rect.left-left)/scale,y=(e.clientY-rect.top-top)/scale;if(x<0||y<0||x>photo.naturalWidth||y>photo.naturalHeight)return;manualPoints.push([x,y]);updateManualPins();if(manualPoints.length===5){manualActive=false;$('scanManualStatus').textContent='5個の位置を指定しました。切り出し画像を必ず確認してください。';scan()}else{$('scanManualStatus').textContent='次は'+markNames[manualPoints.length]+'の印の中心をタップしてください（'+(manualPoints.length+1)+'/5）'}});
+$('scanPreview').addEventListener('click',e=>{if(!manualActive||!photo)return;const rect=e.currentTarget.getBoundingClientRect();const scale=Math.min(rect.width/photo.naturalWidth,420/photo.naturalHeight);const w=photo.naturalWidth*scale,h=photo.naturalHeight*scale;const left=(rect.width-w)/2,top=(rect.height-h)/2;const x=(e.clientX-rect.left-left)/scale,y=(e.clientY-rect.top-top)/scale;if(x<0||y<0||x>photo.naturalWidth||y>photo.naturalHeight)return;manualPoints.push([x,y]);updateManualPins();if(manualPoints.length===5){manualActive=false;$('scanManualStatus').textContent='5個の位置を指定しました。印の中心を探索しました。切り出し画像を必ず確認してください。';scan()}else{$('scanManualStatus').textContent='次は'+markNames[manualPoints.length]+'の印の中心をタップしてください（'+(manualPoints.length+1)+'/5）'}});
 function bits(c){let a=c.getContext('2d',{willReadFrequently:true}).getImageData(0,0,32,32).data;let out=[];for(let i=0;i<a.length;i+=4){let v=(a[i]*.299+a[i+1]*.587+a[i+2]*.114);out.push(v<115?1:0)}return out}
 // v2.9: For borderline circle/double-circle cases, count concentric dark bands.
 // This is deliberately conservative: disagreement or poor contrast stays unconfirmed.
@@ -127,9 +182,9 @@ function scanGroup(crops){
  });
 }
 function classify(c){return classifyDetail(c).value}
-function scan(){if(!photo)return;const grid=$('scanGrid');grid.innerHTML='';const dx=Number($('scanX').value),dy=Number($('scanY').value);const crops=manualPoints.length===5?manualPoints.map(([x,y])=>naturalPatch(photo,x,y)):centers.map(x=>patch(photo,x+dx,CY+dy));const results=scanGroup(crops);['SP','ST','PW','根性','気性'].forEach((name,i)=>{const c=crops[i];const col=document.createElement('div');const label=document.createElement('div');label.textContent=name;const display=document.createElement('canvas');display.width=64;display.height=64;display.getContext('2d').drawImage(c,0,0,64,64);const sel=document.createElement('select');sel.innerHTML=options;const result=results[i];sel.value=result.value;const hint=document.createElement('div');hint.className='scanNote';hint.style.cssText='font-size:10px;line-height:1.3;margin-top:4px';hint.textContent=result.note;col.append(label,display,sel,hint);grid.append(col)});$('scanStatus').textContent=(manualPoints.length===5?'指定位置から切り出しました。':'従来の固定位置で切り出しました。位置がずれたら写真上で5個の印を指定してください。')+' 曖昧な印は「？」で保留。必ず目視確認してください。'}
+function scan(){if(!photo)return;const grid=$('scanGrid');grid.innerHTML='';const dx=Number($('scanX').value),dy=Number($('scanY').value);const isManual=manualPoints.length===5;const crops=isManual?manualCrops():centers.map(x=>patch(photo,x+dx,CY+dy));const results=scanGroup(crops);if(isManual)results.forEach((r,i)=>{if(!scanRefinements[i]){r.value='';r.note='中心を確定できません（手動確認）'}else{r.note+='・中心補正済み'}});['SP','ST','PW','根性','気性'].forEach((name,i)=>{const c=crops[i];const col=document.createElement('div');const label=document.createElement('div');label.textContent=name;const display=document.createElement('canvas');display.width=64;display.height=64;display.getContext('2d').drawImage(c,0,0,64,64);const sel=document.createElement('select');sel.innerHTML=options;const result=results[i];sel.value=result.value;const hint=document.createElement('div');hint.className='scanNote';hint.style.cssText='font-size:10px;line-height:1.3;margin-top:4px';hint.textContent=result.note;col.append(label,display,sel,hint);grid.append(col)});$('scanStatus').textContent=(manualPoints.length===5?'指定位置の周囲から円形を探索して切り出しました。中心補正できない印は「？」にしています。':'従来の固定位置で切り出しました。位置がずれたら写真上で5個の印を指定してください。')+' 曖昧な印は「？」で保留。必ず目視確認してください。'}
 
-$('scanFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const url=URL.createObjectURL(f);const im=await imageLoad(url);photo=im;$('scanPreview').src=url;$('scanPreview').classList.remove('hide');$('scanResult').classList.remove('hide');$('scanX').value=0;$('scanY').value=0;manualPoints=[];manualActive=false;$('scanManualStatus').textContent='印の位置がずれたら「位置指定を開始」で5個の印を順番にタップしてください。';$('scanPins').innerHTML='';['ocrName','ocrSire','ocrDam','ocrSex','ocrGrowth'].forEach(id=>$(id).value='');$('ocrStatus').textContent='画像を選択しました。「文字を読み取る」を押してください。';scan()}catch(err){alert('画像を読み込めませんでした')} });
+$('scanFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const url=URL.createObjectURL(f);const im=await imageLoad(url);photo=im;scanSource=null;scanRefinements=[];$('scanPreview').src=url;$('scanPreview').classList.remove('hide');$('scanResult').classList.remove('hide');$('scanX').value=0;$('scanY').value=0;manualPoints=[];manualActive=false;$('scanManualStatus').textContent='印の位置がずれたら「位置指定を開始」で5個の印を順番にタップしてください。';$('scanPins').innerHTML='';['ocrName','ocrSire','ocrDam','ocrSex','ocrGrowth'].forEach(id=>$(id).value='');$('ocrStatus').textContent='画像を選択しました。「文字を読み取る」を押してください。';scan()}catch(err){alert('画像を読み込めませんでした')} });
 $('scanRetry').onclick=scan;$('scanX').onchange=scan;$('scanY').onchange=scan;
 $('scanApply').onclick=()=>{const vals=[...$('scanGrid').querySelectorAll('select')].map(x=>x.value);vals.forEach((v,i)=>{const target=$('m'+i);if(target)target.value=v});[['ocrName','name'],['ocrSire','sire'],['ocrDam','dam'],['ocrSex','sex'],['ocrGrowth','growth']].forEach(([from,to])=>{const v=$(from).value.trim();if(v)$(to).value=v});$('scanStatus').textContent='確認した項目を入力欄へ反映しました。内容を確認して登録してください。';document.getElementById('horseform').scrollIntoView({behavior:'smooth',block:'center'})};
 
