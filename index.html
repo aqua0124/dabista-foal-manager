@@ -5,11 +5,11 @@
 .scanGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}.scanGrid>div{text-align:center;font-size:12px}.scanGrid canvas{width:100%;max-width:80px;border:1px solid #ddd;border-radius:6px}.scanGrid select{width:100%;padding:5px 0;font-size:12px}.scanNote{font-size:12px;color:#667085}.scanPreview{width:100%;max-height:420px;object-fit:contain;border-radius:8px;background:#eee;display:block}.scanPhotoWrap{position:relative;display:inline-block;width:100%;touch-action:manipulation}.scanPin{position:absolute;transform:translate(-50%,-50%);background:#4538d4;color:white;border:2px solid white;border-radius:50%;font-size:12px;font-weight:bold;padding:3px 6px;pointer-events:none;box-shadow:0 1px 5px #2229}.scanAdjust{display:flex;flex-wrap:wrap;gap:10px}.scanAdjust label{font-size:12px}.scanAdjust input{width:105px}
 </style><style>
 .management-panel>h2{display:none}.management-panel>summary{font-weight:750;font-size:17px;cursor:pointer;list-style-position:inside;padding:3px 0}.management-panel[open]>summary{padding-bottom:12px;border-bottom:1px solid #eaecf0;margin-bottom:12px}.reference-box{margin-top:12px;padding:10px 7px 4px;border-top:1px solid #eaecf0;background:#f8f9fc;border-radius:8px;font-size:13px}.reference-box>b{display:block;color:#667085;font-size:12px;margin-bottom:7px}.reference-box .flex{align-items:flex-start;gap:5px;padding:3px 0}.reference-value{max-width:68%;text-align:right;overflow-wrap:anywhere}.management-panel{margin-top:12px}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.4｜プログラム v4.4｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.5｜プログラム v4.5｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
 <section class="panel" id="generationPanel"><div class="flex between"><h2>世代の選択</h2><span class="muted">西暦4桁・年表示</span></div><div class="flex" style="margin-top:12px"><label>世代 <select id="generation"></select></label><span class="muted">選択した世代の幼駒を表示</span></div></section>
 <section class="panel"><div class="bar"><div class="stat"><b id="count">0/24</b><span class="muted">登録頭数</span></div><div class="stat"><b id="gi">0</b><span class="muted">GⅠ候補</span></div><div class="stat"><b id="kept">0</b><span class="muted">確保指定</span></div></div></section>
 <section class="panel" id="auditPanel"><div class="flex between"><h2>🩺 データ確認・未処理アラーム</h2><button type="button" id="auditRefresh">再チェック</button></div><p class="muted">内部父母マスターとの対応・入力漏れを検査します。外部DB未照合だけでは警告しません。</p><div class="flex" style="margin:10px 0"><label class="small">検査範囲 <select id="auditScope"><option value="current">現在の世代</option><option value="all">全世代</option></select></label></div><div id="auditResults" aria-live="polite"></div></section>
-<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（画面位置自動検出 v4.4）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
+<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（画面位置自動検出 v4.5）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
 <p class="scanNote">テレビ画面を撮影した写真を選択します。ゲーム画面の緑色の見出しを手掛かりに表示位置を推定し、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><div class="scanPhotoWrap" id="scanPhotoWrap"><img id="scanPreview" class="scanPreview hide" alt="選択した画像"><div id="scanPins"></div></div>
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
@@ -181,7 +181,7 @@ function ringEvidence(c){
  if(singles>=7&&doubles===0)return '3';
  return null;
 }
-// v4.4: inspect the center independently of the circular outline. A dark
+// v4.5: inspect the center independently of the circular outline. A dark
 // central disk indicates ◉, whereas ◎ has a pale center and two rings.
 function centerFillEvidence(c){
  const d=c.getContext('2d',{willReadFrequently:true}).getImageData(0,0,32,32).data;
@@ -246,6 +246,17 @@ function scanGroup(crops){
  initial.forEach((r,i)=>{if(r.value==='3'&&ringEvidence(crops[i])==='4'){
   r.value='';r.note='二重輪の可能性があるため○/◎を保留（要確認）';
  }});
+ // v4.5: A clean hollow single ring should not be promoted to ◎ by
+ // the template matcher. Require consistent radial evidence across angles.
+ initial.forEach((r,i)=>{
+  const rings=ringEvidence(crops[i]),fill=centerFillEvidence(crops[i]);
+  if(fill.filled)return;
+  if(rings==='3'){
+   r.value='3';r.note='推定 ○（単輪を複数方向で確認・要確認）';
+  }else if(rings==='4'){
+   r.value='4';r.note='推定 ◎（二重輪を複数方向で確認・要確認）';
+  }
+ });
  const refs={3:[],4:[]};
  initial.forEach((r,i)=>{if((r.value==='3'||r.value==='4')&&signatures[i]&&!r.note.includes('輪郭再検査'))refs[r.value].push(signatures[i])});
  return initial.map((r,i)=>{
@@ -331,16 +342,38 @@ for(const rect of birthRects){
  const first=sireNames.filter(n=>compact.startsWith(normParent(n))).sort((a,b)=>b.length-a.length)[0];
  if(first){const rest=compact.slice(normParent(first).length);const second=exactName(damNames,rest);if(second){foundPair=[first,second];break}}
 }
-// If the year/birth labels are not recognized together, read two dedicated
-// columns of the race-history birth row. Confirm against known parent masters
-// before filling; otherwise keep blank instead of inserting garbled OCR.
+// v4.5: The birth row is narrow, and the OCR engine frequently loses the
+// year/birth tokens. Read the two *actual* name columns independently, using
+// several small, overlapping crops rather than large rectangles that include
+// unrelated labels. Only populate fields on a unique master match.
 if(!foundPair){
- const sireRect=[178,533,115,39],damRect=[293,533,154,39];
- const sireRaw=(await recognizeDiagnostic('父馬候補',sireRect)).data.text;
- const damRaw=(await recognizeDiagnostic('母馬候補',damRect)).data.text;
- const exact=t=>parentNames.find(n=>normParent(n)===normParent(t));
- const sire=sireNames.find(n=>normParent(n)===normParent(sireRaw)),dam=damNames.find(n=>normParent(n)===normParent(damRaw));
- if(sire&&dam)foundPair=[sire,dam];
+ const sireRects=[[270,535,125,34],[285,540,110,28],[300,530,105,42],[240,525,160,50]];
+ const damRects=[[385,535,150,34],[400,540,135,28],[375,530,165,42],[360,525,190,50]];
+ const normalize=t=>String(t||'').normalize('NFKC').replace(/[\\s　|｜・、。:：_]/g,'');
+ const candidate=(raw,names)=>{
+  const t=normalize(raw);
+  if(!t)return null;
+  const matches=[...new Set(names)].filter(n=>{
+   const k=normalize(n);
+   return k.length>=3&&(t===k||t.includes(k));
+  }).sort((a,b)=>normalize(b).length-normalize(a).length);
+  return matches.length===1?matches[0]:null;
+ };
+ let sireHits=[],damHits=[];
+ for(const [label,rects,names,hits] of [
+  ['父馬・列',sireRects,sireNames,sireHits],
+  ['母馬・列',damRects,damNames,damHits]
+ ]){
+  for(let i=0;i<rects.length;i++){
+   const r=await recognizeDiagnostic(label+(i+1),rects[i]);
+   const hit=candidate(r.data.text,names);
+   if(hit)hits.push(hit);
+  }
+ }
+ const uniqueSires=[...new Set(sireHits)],uniqueDams=[...new Set(damHits)];
+ if(uniqueSires.length===1&&uniqueDams.length===1){
+  foundPair=[uniqueSires[0],uniqueDams[0]];
+ }
 }
 if(foundPair){$('ocrSire').value=foundPair[0];$('ocrDam').value=foundPair[1];parentNotice=' 父母名を競走成績の誕生行から抽出しました。必ず確認してください。'}
 else { $('scanDiagnostics').open=true; parentNotice=birthEvidence?' 誕生行は検出しましたが父母名を確定できませんでした。手入力してください。':' 誕生行の文字検出が不確実なため父母名を保留しました。手入力してください。'; }
