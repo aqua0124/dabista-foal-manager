@@ -9,7 +9,7 @@
 <section class="panel" id="generationPanel"><div class="flex between"><h2>世代の選択</h2><span class="muted">西暦4桁・年表示</span></div><div class="flex" style="margin-top:12px"><label>世代 <select id="generation"></select></label><span class="muted">選択した世代の幼駒を表示</span></div></section>
 <section class="panel"><div class="bar"><div class="stat"><b id="count">0/24</b><span class="muted">登録頭数</span></div><div class="stat"><b id="gi">0</b><span class="muted">GⅠ候補</span></div><div class="stat"><b id="kept">0</b><span class="muted">確保指定</span></div></div></section>
 <section class="panel" id="auditPanel"><div class="flex between"><h2>🩺 データ確認・未処理アラーム</h2><button type="button" id="auditRefresh">再チェック</button></div><p class="muted">内部父母マスターとの対応・入力漏れを検査します。外部DB未照合だけでは警告しません。</p><div class="flex" style="margin:10px 0"><label class="small">検査範囲 <select id="auditScope"><option value="current">現在の世代</option><option value="all">全世代</option></select></label></div><div id="auditResults" aria-live="polite"></div></section>
-<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（新旧成長型比較 v4.8試験版）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
+<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み・簡単修正 v4.9</h2><span class="badge warn">推定値を確認・タップ修正</span></div>
 <p class="scanNote">テレビ画面を撮影した写真を選択します。ゲーム画面の緑色の見出しを手掛かりに表示位置を推定し、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><div class="scanPhotoWrap" id="scanPhotoWrap"><img id="scanPreview" class="scanPreview hide" alt="選択した画像"><div id="scanPins"></div></div>
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
@@ -24,7 +24,7 @@
 
 
 
-<section class="panel"><div class="flex between"><h2 id="formtitle">幼駒を登録</h2><button id="cancel" class="hide">編集をやめる</button></div><form id="horseform"><div class="fields" style="margin-top:12px"><div><label for="name">馬名・仮名 *</label><input id="name" type="text" required maxlength="80" placeholder="例：ロイヤルワンド"></div><div><label for="sex">性別</label><select id="sex"><option value="">未登録</option><option value="牡">牡</option><option value="牝">牝</option></select></div><div><label for="sire">父馬</label><input id="sire" type="text" placeholder="任意"></div><div><label for="dam">母馬</label><input id="dam" type="text" placeholder="任意"></div><div><label for="growth">成長型</label><select id="growth"><option value="">未設定</option><option value="早熟">早熟</option><option value="普通">普通</option><option value="晩成">晩成</option><option value="持続">持続</option></select></div><div><label for="price">売却価格（万円）</label><input id="price" type="number" min="0" step="1" placeholder="未入力可"></div><div><label for="stableMonth">入厩時期（2歳・月／週）</label><div class="flex" style="gap:6px"><select id="stableMonth" aria-label="入厩月"><option value="">月未設定</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select><select id="stableWeek" aria-label="入厩週"><option value="">週未設定</option><option value="1">1週</option><option value="2">2週</option><option value="3">3週</option><option value="4">4週</option><option value="5">5週</option></select></div><span class="muted small">例：7月・1週 → 7/1</span></div><div><label for="giWins">GⅠ勝利数</label><input id="giWins" type="number" min="0" step="1" inputmode="numeric" placeholder="未記録（0勝と区別）"></div></div><p class="small">能力印（未確認は「？」のまま）</p><div class="editor" id="markedit"></div><div class="flex" style="margin-top:14px"><button class="primary" type="submit" id="submit">この馬を登録</button><span class="muted">入力内容はこのブラウザに自動保存</span></div></form></section>
+<section class="panel"><div class="flex between"><h2 id="formtitle">幼駒を登録</h2><button id="cancel" class="hide">編集をやめる</button></div><form id="horseform"><div class="fields" style="margin-top:12px"><div><label for="name">馬名・仮名 *</label><input id="name" type="text" required maxlength="80" placeholder="例：ロイヤルワンド"></div><div><label for="sex">性別</label><select id="sex"><option value="">未登録</option><option value="牡">牡</option><option value="牝">牝</option></select></div><div><label for="sire">父馬</label><input id="sire" type="text" placeholder="任意"></div><div><label for="dam">母馬</label><input id="dam" type="text" placeholder="任意"></div><div><label for="growth">成長型</label><select id="growth"><option value="">未設定</option><option value="早熟">早熟</option><option value="普通">普通</option><option value="晩成">晩成</option><option value="持続">持続</option></select></div><div><label for="price">売却価格（万円）</label><input id="price" type="number" min="0" step="1" placeholder="未入力可"></div><div><label for="stableMonth">入厩時期（2歳・月／週）</label><div class="flex" style="gap:6px"><select id="stableMonth" aria-label="入厩月"><option value="">月未設定</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select><select id="stableWeek" aria-label="入厩週"><option value="">週未設定</option><option value="1">1週</option><option value="2">2週</option><option value="3">3週</option><option value="4">4週</option><option value="5">5週</option></select></div><span class="muted small">例：7月・1週 → 7/1</span></div><div><label for="giWins">GⅠ勝利数</label><input id="giWins" type="number" min="0" step="1" inputmode="numeric" placeholder="未記録（0勝と区別）"></div></div><p class="small">能力印（OCR結果を確認して必要な箇所のみ修正）</p><div class="editor" id="markedit"></div><div class="flex" style="margin-top:14px"><button class="primary" type="submit" id="submit">この馬を登録</button><span class="muted">入力内容はこのブラウザに自動保存</span></div></form></section>
 <section class="panel"><div class="flex between"><h2 id="rankingTitle">同世代の比較・ランキング</h2><div class="flex"><label class="small">並び順 <select id="sort"><option value="default">標準（性別→価格）</option><option value="score">能力総合点</option><option value="sp">SP</option><option value="st">ST</option><option value="pw">PW</option><option value="guts">根性</option><option value="temper">気性</option><option value="fives">紫◉の数</option><option value="price">売却価格</option><option value="growth">成長型</option><option value="stable">入厩時期</option><option value="giWins">GⅠ勝利数</option><option value="name">馬名</option></select></label><button type="button" class="sort-reset" id="resetSort">標準順に戻す</button><label class="small"><input type="checkbox" id="onlygi"> GⅠ候補のみ</label></div></div><div class="tablewrap" style="margin-top:12px"><table class="data"><thead><tr><th class="sortable sticky-name" data-sort="name" tabindex="0" role="button" aria-label="馬名で並び替え">馬名</th><th class="sortable sticky-sex" data-sort="sex" tabindex="0" role="button" aria-label="性別で並び替え">性別</th><th class="sortable" data-sort="sp" tabindex="0" role="button" aria-label="SPで並び替え">SP</th><th class="sortable" data-sort="st" tabindex="0" role="button" aria-label="STで並び替え">ST</th><th class="sortable" data-sort="pw" tabindex="0" role="button" aria-label="PWで並び替え">PW</th><th class="sortable" data-sort="guts" tabindex="0" role="button" aria-label="根で並び替え">根</th><th class="sortable" data-sort="temper" tabindex="0" role="button" aria-label="気で並び替え">気</th><th class="sortable" data-sort="fives" tabindex="0" role="button" aria-label="◉数で並び替え">◉数</th><th class="sortable" data-sort="score" tabindex="0" role="button" aria-label="能力点で並び替え">能力点</th><th class="sortable" data-sort="growth" tabindex="0" role="button" aria-label="成長型で並び替え">成長型</th><th class="sortable" data-sort="price" tabindex="0" role="button" aria-label="価格(万)で並び替え">価格(万)</th><th class="sortable" data-sort="gi" tabindex="0" role="button" aria-label="判定で並び替え">判定</th><th class="sortable" data-sort="decision" tabindex="0" role="button" aria-label="判断で並び替え">判断</th><th class="sortable" data-sort="stable" tabindex="0" role="button" aria-label="入厩時期で並び替え">入厩時期</th><th class="sortable" data-sort="giWins" tabindex="0" role="button" aria-label="GⅠ勝利数で並び替え">GⅠ勝利数</th><th>編集</th></tr></thead><tbody id="rows"></tbody></table></div><p class="muted">入厩時期は2歳固定で月／週を表示します。GⅠ勝利数の未記録と0勝は区別します。標準順は性別（牡→牝）・価格降順です。成長型は早熟→持続→普通→晩成の順に並び替えます。判定を変更すると確保→保留・未決定→売却の順に整理し、移動した行を強調します。能力5は紫の◉。価格比率は学習モデルが整うまで未算出です。能力点はGⅠ勝利確率ではありません。</p><div id="warnings" class="note"></div></section>
 <section class="panel"><h2 id="compareTitle">2頭の詳細比較</h2><div class="compare" style="margin-top:12px"><div><label class="small">比較馬 A</label><select id="compareA" style="width:100%"></select><div id="detailA"></div></div><div><label class="small">比較馬 B</label><select id="compareB" style="width:100%"></select><div id="detailB"></div></div></div></section>
 <details class="panel" id="crossGenerationPanel"><summary style="font-weight:750;font-size:17px">🐴 繁殖牝馬別・世代間比較</summary><p class="small">同じ母馬の産駒を年度順に一覧表示。2頭を選んで能力印を詳細比較できます。母馬IDを優先して照合します。</p><label>繁殖牝馬 <select id="crossDam"></select></label><div class="tablewrap" style="margin-top:12px"><table class="data"><thead><tr><th>選択</th><th>世代</th><th>馬名</th><th>SP</th><th>ST</th><th>PW</th><th>根</th><th>気</th><th>能力点</th><th>成長型</th><th>父</th><th>売却価格</th><th>GⅠ勝利</th></tr></thead><tbody id="crossRows"></tbody></table></div><h3>選択した2頭の比較</h3><div id="crossDetails" class="compare"></div></details>
@@ -835,6 +835,66 @@ $('auditRefresh').onclick=()=>{audit();headings();cross()};$('auditScope').oncha
 const originalSave=api().save;api().save=()=>{originalSave();queueMicrotask(()=>{audit();headings();cross()})};
 const originalRender=api().render;api().render=()=>{originalRender();audit();headings();cross()};
 headings();audit();cross();
+})();
+</script>
+<style>
+/* v4.9: additive editing UI, without changing storage or OCR engines */
+.v49-quick{border:1px solid #d6dfeb;background:#f8fafc;border-radius:12px;padding:12px;margin:12px 0}
+.v49-head{font-weight:750;margin-bottom:8px}.v49-markrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+.v49-mark{border:2px solid #d0d6e1;border-radius:10px;padding:7px 2px;min-width:0;background:#f2f5f9;color:#17212f;text-align:center;font:inherit}
+.v49-mark.v49-uncertain{background:#fff1cd;border-color:#d5a53a}.v49-mark.v49-changed{background:#e3f6eb;border-color:#43a576}
+.v49-mark.v49-selected{outline:2px solid #2563eb;outline-offset:1px}
+.v49-mark .v49-glyph{font-size:26px;display:block;line-height:1.5;font-weight:bold}
+.v49-mark small{display:block;font-size:10px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.v49-choices{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}.v49-choices button{flex:1;min-width:43px;font-size:19px;padding:9px 3px}
+.v49-choices button[aria-pressed=true]{background:#2458a6;color:white}
+.v49-pills{display:flex;flex-wrap:wrap;gap:6px;margin:7px 0}.v49-pills button{flex:1;min-width:55px;padding:9px 4px}
+.v49-pills button[aria-pressed=true]{background:#2458a6;color:white}
+.v49-muted{font-size:12px;color:#566477;margin:6px 0}
+.v49-action{margin-top:10px;width:100%;padding:13px}
+</style>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),symbols={'1':'×','2':'△','3':'○','4':'◎','5':'◉','':'？'};
+const names=['SP','ST','PW','根性','気性'];let active=-1;let edited=[false,false,false,false,false];
+const root=document.createElement('section');root.className='v49-quick';root.id='v49Quick';
+root.innerHTML='<div class="v49-head">✏️ 能力印・かんたん確認</div><p class="v49-muted">画像と推定印を見比べ、違う印だけタップしてください。黄色は推定に迷いがある項目です。</p><div class="v49-markrow" id="v49Marks"></div><div id="v49Choices"></div><div class="v49-head" style="margin-top:15px">性別・成長型</div><div id="v49Sex" class="v49-pills"></div><div id="v49Growth" class="v49-pills"></div><button type="button" class="primary v49-action" id="v49Apply">確認内容を登録欄に反映 ↓</button><p class="v49-muted" id="v49Message">推定値は候補です。登録前に画像で確認してください。</p>';
+const scanGrid=$('scanGrid');if(!scanGrid)return;scanGrid.insertAdjacentElement('afterend',root);
+const getSels=()=>[...scanGrid.querySelectorAll('select')];
+function suggested(sel){if(sel.value)return {value:sel.value,uncertain:false};
+ const note=(sel.parentElement?.querySelector('.scanNote')?.textContent||'');
+ // Existing classifier's candidate is reused, but no fabricated guess when no candidate exists.
+ const m=note.match(/候補\s*([○◎◉△×])/);const dict={'×':'1','△':'2','○':'3','◎':'4','◉':'5'};
+ return m?{value:dict[m[1]],uncertain:true}:{value:'',uncertain:true};
+}
+function syncMarks(){const sels=getSels();if(sels.length!==5)return;
+ const out=$('v49Marks');out.replaceChildren();sels.forEach((sel,i)=>{
+  if(!edited[i]){const candidate=suggested(sel);if(candidate.value&&!sel.value){sel.value=candidate.value;sel.dataset.v49Candidate='1'} }
+  const btn=document.createElement('button');btn.type='button';btn.className='v49-mark';
+  if(!sel.value||sel.dataset.v49Candidate==='1')btn.classList.add('v49-uncertain');
+  if(edited[i])btn.classList.add('v49-changed');if(active===i)btn.classList.add('v49-selected');
+  btn.setAttribute('aria-label',names[i]+'の印を変更');
+  const title=document.createElement('small');title.textContent=names[i];
+  const glyph=document.createElement('span');glyph.className='v49-glyph';glyph.textContent=symbols[sel.value]||'？';
+  const tag=document.createElement('small');tag.textContent=edited[i]?'修正済':!sel.value?'未判定':sel.dataset.v49Candidate?'候補':'推定';
+  btn.append(title,glyph,tag);btn.onclick=()=>{active=active===i?-1:i;syncMarks()};out.append(btn);
+ });renderChoices();}
+function renderChoices(){const box=$('v49Choices');box.replaceChildren();if(active<0)return;
+ const line=document.createElement('div');line.className='v49-muted';line.textContent=names[active]+'：正しい印を選択';box.append(line);
+ const choices=document.createElement('div');choices.className='v49-choices';const sels=getSels();
+ for(const val of ['1','2','3','4','5','']){const b=document.createElement('button');b.type='button';b.textContent=symbols[val];b.setAttribute('aria-pressed',String(sels[active].value===val));b.onclick=()=>{sels[active].value=val;delete sels[active].dataset.v49Candidate;edited[active]=true;active=-1;syncMarks()};choices.append(b)}box.append(choices);
+ const canvas=sels[active]?.parentElement?.querySelector('canvas');if(canvas){const copy=document.createElement('canvas');copy.width=88;copy.height=88;copy.style.cssText='display:block;margin:8px auto;border:1px solid #ccc';copy.getContext('2d').drawImage(canvas,0,0,88,88);box.append(copy)}
+}
+function pills(target,source,values){const box=$(target),sel=$(source);box.replaceChildren();for(const val of values){const b=document.createElement('button');b.type='button';b.textContent=val;b.setAttribute('aria-pressed',String(sel.value===val));b.onclick=()=>{sel.value=val;renderPills()};box.append(b)}}
+function renderPills(){pills('v49Sex','ocrSex',['牡','牝']);pills('v49Growth','ocrGrowth',['早熟','持続','普通','晩成'])}
+const observer=new MutationObserver(()=>{if(getSels().length===5){edited=[false,false,false,false,false];active=-1;syncMarks()}});
+observer.observe(scanGrid,{childList:true});
+for(const id of ['ocrSex','ocrGrowth'])$(id).addEventListener('change',renderPills);
+$('v49Apply').onclick=()=>{$('scanApply').click();$('v49Message').textContent='登録欄へ反映しました。内容を確認して「この馬を登録」を押してください。'};
+$('scanFile').addEventListener('change',()=>{edited=[false,false,false,false,false];active=-1;$('v49Message').textContent='新しい画像です。推定値を確認してください。';renderPills()});
+// OCR may set select values programmatically; refresh after OCR finishes.
+const ocrStatus=$('ocrStatus');if(ocrStatus)new MutationObserver(renderPills).observe(ocrStatus,{childList:true,characterData:true,subtree:true});
+renderPills();syncMarks();
 })();
 </script>
 </body></html>
