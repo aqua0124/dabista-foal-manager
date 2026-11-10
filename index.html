@@ -8,7 +8,7 @@
 </style><style>
 /* v4.9.2: registration-first UI; keep legacy nodes alive for existing scripts. */
 .v492-legacy-tools,.v492-old-selectors{display:none!important}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.9.2試験版｜プログラム v4.9.2試験版｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.9.3試験版｜プログラム v4.9.3試験版｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
 <section class="panel" id="generationPanel"><div class="flex between"><h2>世代の選択</h2><span class="muted">西暦4桁・年表示</span></div><div class="flex" style="margin-top:12px"><label>世代 <select id="generation"></select></label><span class="muted">選択した世代の幼駒を表示</span></div></section>
 <section class="panel"><div class="bar"><div class="stat"><b id="count">0/24</b><span class="muted">登録頭数</span></div><div class="stat"><b id="gi">0</b><span class="muted">GⅠ候補</span></div><div class="stat"><b id="kept">0</b><span class="muted">確保指定</span></div></div></section>
 <section class="panel" id="auditPanel"><div class="flex between"><h2>🩺 データ確認・未処理アラーム</h2><button type="button" id="auditRefresh">再チェック</button></div><p class="muted">内部父母マスターとの対応・入力漏れを検査します。外部DB未照合だけでは警告しません。</p><div class="flex" style="margin:10px 0"><label class="small">検査範囲 <select id="auditScope"><option value="current">現在の世代</option><option value="all">全世代</option></select></label></div><div id="auditResults" aria-live="polite"></div></section>
@@ -19,11 +19,11 @@
 <div class="v492-legacy-tools" style="margin:12px 0;padding:12px;background:#f4f3ff;border-radius:10px;border:1px solid #d6d0ff"><strong>📍 能力印の位置を写真で指定（推奨）</strong><p class="scanNote" style="margin:6px 0">撮影位置が変わった場合、下の「位置指定を開始」を押し、上の写真で <b>SP → ST → PW → 根性 → 気性</b> の印の中心を順番にタップしてください。5個指定すると、タップ周辺から円形の印を探して中心を補正します。少しずれたタップでも構いません。誤った場所を押した場合は「やり直し」。</p><div class="flex" style="gap:8px;flex-wrap:wrap"><button id="scanManualStart" type="button">位置指定を開始</button><button id="scanManualReset" type="button">やり直し・自動位置へ</button></div><div id="scanManualStatus" class="scanNote" role="status" style="margin-top:7px">撮影位置が合わない場合に使用してください。</div></div><div class="scanAdjust v492-legacy-tools"><label>左右位置 <input id="scanX" type="range" min="-140" max="140" value="0"></label><label>上下位置 <input id="scanY" type="range" min="-140" max="140" value="0"></label><button id="scanRetry" type="button">再判定</button></div>
 <div class="scanGrid v492-old-selectors" id="scanGrid"></div>
 <div style="border:1px solid #e4e7ec;border-radius:10px;padding:12px;margin:12px 0">
-<div class="flex between"><strong>馬名・性別・成長型・父馬・母馬（OCR試作）</strong><button type="button" id="ocrRun" class="v492-legacy-tools">文字を読み取る（検出位置・試験）</button><button type="button" id="growthCompareRun" class="v492-legacy-tools" style="margin-left:6px">成長型・新旧比較（試験）</button></div>
-<p class="scanNote">OCRは写真の傾きを推定して水平補正し、競走成績欄を広域で読み取り、父母マスター・過去の登録馬と照合します。候補は必ず確認して選択してください。画面の傾き・反射・隠れた文字は誤読することがあります。必ず結果を確認し、違う場合は手入力してください。初回は日本語認識データの読み込みに時間がかかります。認識位置が違う場合は画像を確認し、結果を手修正してください。</p>
+<div class="flex between"><strong>馬名・父馬・母馬（OCR入力補助）</strong><button type="button" id="ocrRun" class="v492-legacy-tools">文字を読み取る（検出位置・試験）</button><button type="button" id="growthCompareRun" class="v492-legacy-tools" style="margin-left:6px">成長型・新旧比較（試験）</button></div>
+<p class="scanNote v493-hidden">OCRは写真の傾きを推定して水平補正し、競走成績欄を広域で読み取り、父母マスター・過去の登録馬と照合します。候補は必ず確認して選択してください。画面の傾き・反射・隠れた文字は誤読することがあります。必ず結果を確認し、違う場合は手入力してください。初回は日本語認識データの読み込みに時間がかかります。認識位置が違う場合は画像を確認し、結果を手修正してください。</p>
 <div class="fields" style="margin-top:8px"><div><label for="ocrName">馬名</label><input type="text" id="ocrName" placeholder="認識待ち"></div><div class="v49-legacy-choice"><label for="ocrSex">性別</label><select id="ocrSex"><option value="">未判定</option><option value="牡">牡</option><option value="牝">牝</option></select></div><div><label for="ocrSire">父馬</label><input type="text" id="ocrSire" placeholder="認識待ち"></div><div><label for="ocrDam">母馬</label><input type="text" id="ocrDam" placeholder="認識待ち"></div></div>
-<div class="v49-legacy-choice" style="margin-top:8px"><label for="ocrGrowth">幼駒の成長型（OCR推定・要確認）</label><select id="ocrGrowth"><option value="">未判定</option><option value="早熟">早熟</option><option value="普通">普通</option><option value="晩成">晩成</option><option value="持続">持続</option></select></div><div id="growthCompareResult" class="scanNote" style="margin-top:10px;padding:10px;border:1px solid #c9d5e3;border-radius:8px" aria-live="polite">成長型の比較は未実行です。現行OCRの後に「成長型・新旧比較」を押してください。</div><div id="parentCandidates" class="scanNote" style="margin-top:10px" aria-live="polite"></div><div id="ocrStatus" class="scanNote" role="status" style="margin-top:8px">文字認識は未実行です。</div>
-</div><details id="scanDiagnostics" style="margin:12px 0;border:1px solid #d5d9e1;border-radius:10px;padding:10px"><summary>🔬 認識診断（通常は閉じる）</summary><p class="muted">OCRの切り出し画像・原文を確認できます。画像は端末内で処理します。</p><div id="diagnosticContent" style="font-size:12px;overflow-wrap:anywhere"></div></details><div class="flex"><button class="primary" type="button" id="scanApply">確認した10項目を入力欄へ反映</button><span id="scanStatus" class="scanNote"></span></div></div></section>
+<div class="v49-legacy-choice" style="margin-top:8px"><label for="ocrGrowth">幼駒の成長型（OCR推定・要確認）</label><select id="ocrGrowth"><option value="">未判定</option><option value="早熟">早熟</option><option value="普通">普通</option><option value="晩成">晩成</option><option value="持続">持続</option></select></div><div id="growthCompareResult" class="scanNote" style="display:none;margin-top:10px;padding:10px;border:1px solid #c9d5e3;border-radius:8px" aria-live="polite">成長型の比較は未実行です。現行OCRの後に「成長型・新旧比較」を押してください。</div><div id="parentCandidates" class="scanNote" style="margin-top:10px" aria-live="polite"></div><div id="ocrStatus" class="scanNote v493-hidden" role="status" style="margin-top:8px">文字認識は未実行です。</div>
+</div><details id="scanDiagnostics" style="margin:12px 0;border:1px solid #d5d9e1;border-radius:10px;padding:10px"><summary>🔬 認識診断（通常は閉じる）</summary><p class="muted">OCRの切り出し画像・原文を確認できます。画像は端末内で処理します。</p><div id="diagnosticContent" style="font-size:12px;overflow-wrap:anywhere"></div></details><div class="flex"><button class="primary v493-hidden" type="button" id="scanApply">確認した10項目を入力欄へ反映</button><span id="scanStatus" class="scanNote"></span></div></div></section>
 
 
 
@@ -846,7 +846,11 @@ headings();audit();cross();
 })();
 </script>
 <style>
-/* v4.9: additive editing UI, without changing storage or OCR engines */
+/* v4.9.3: auto-sync UI, without changing storage or OCR engines */
+.v493-hidden{display:none!important}
+#scanResult > p.scanNote{display:none!important}
+#scanResult > div:not(#v49Quick){}
+#scanResult .scanNote{}
 .v49-legacy-choice{display:none!important}
 .v49-quick{border:1px solid #d6dfeb;background:#f8fafc;border-radius:12px;padding:12px;margin:12px 0}
 .v49-head{font-weight:750;margin-bottom:8px}.v49-markrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
@@ -867,7 +871,7 @@ headings();audit();cross();
 const $=id=>document.getElementById(id),symbols={'1':'×','2':'△','3':'○','4':'◎','5':'◉','':'？'};
 const names=['SP','ST','PW','根性','気性'];let active=-1;let edited=[false,false,false,false,false];
 const root=document.createElement('section');root.className='v49-quick';root.id='v49Quick';
-root.innerHTML='<div class="v49-head">✏️ 能力印・かんたん確認</div><p class="v49-muted">画像と推定印を見比べ、違う印だけタップしてください。黄色は推定に迷いがある項目です。</p><div class="v49-markrow" id="v49Marks"></div><div id="v49Choices"></div><div class="v49-head" style="margin-top:15px">性別・成長型</div><div id="v49Sex" class="v49-pills"></div><div id="v49Growth" class="v49-pills"></div><button type="button" class="primary v49-action" id="v49Apply">確認内容を登録欄に反映 ↓</button><p class="v49-muted" id="v49Message">推定値は候補です。登録前に画像で確認してください。</p>';
+root.innerHTML='<div class="v49-head">✏️ 能力印・かんたん確認</div><p class="v49-muted">画像と推定印を見比べ、違う印だけタップしてください。黄色は推定に迷いがある項目です。</p><div class="v49-markrow" id="v49Marks"></div><div id="v49Choices"></div><div class="v49-head" style="margin-top:15px">性別・成長型</div><div id="v49Sex" class="v49-pills"></div><div id="v49Growth" class="v49-pills"></div><p class="v49-muted" id="v49Message">推定値・修正値は登録欄へ自動反映されます。確認後「この馬を登録」を押してください。</p>';
 const scanGrid=$('scanGrid');if(!scanGrid)return;scanGrid.insertAdjacentElement('afterend',root);
 const getSels=()=>[...scanGrid.querySelectorAll('select')];
 function suggested(sel){if(sel.value)return {value:sel.value,uncertain:false};
@@ -891,15 +895,30 @@ function syncMarks(){const sels=getSels();if(sels.length!==5)return;
 function renderChoices(){const box=$('v49Choices');box.replaceChildren();if(active<0)return;
  const line=document.createElement('div');line.className='v49-muted';line.textContent=names[active]+'：正しい印を選択';box.append(line);
  const choices=document.createElement('div');choices.className='v49-choices';const sels=getSels();
- for(const val of ['1','2','3','4','5','']){const b=document.createElement('button');b.type='button';b.textContent=symbols[val];b.setAttribute('aria-pressed',String(sels[active].value===val));b.onclick=()=>{sels[active].value=val;delete sels[active].dataset.v49Candidate;edited[active]=true;active=-1;syncMarks()};choices.append(b)}box.append(choices);
+ for(const val of ['1','2','3','4','5','']){const b=document.createElement('button');b.type='button';b.textContent=symbols[val];b.setAttribute('aria-pressed',String(sels[active].value===val));b.onclick=()=>{sels[active].value=val;delete sels[active].dataset.v49Candidate;edited[active]=true;active=-1;syncMarks();syncRegistration()};choices.append(b)}box.append(choices);
  const canvas=sels[active]?.parentElement?.querySelector('canvas');if(canvas){const copy=document.createElement('canvas');copy.width=88;copy.height=88;copy.style.cssText='display:block;margin:8px auto;border:1px solid #ccc';copy.getContext('2d').drawImage(canvas,0,0,88,88);box.append(copy)}
 }
-function pills(target,source,values){const box=$(target),sel=$(source);box.replaceChildren();for(const val of values){const b=document.createElement('button');b.type='button';b.textContent=val;b.setAttribute('aria-pressed',String(sel.value===val));b.onclick=()=>{sel.value=val;renderPills()};box.append(b)}}
+function pills(target,source,values){const box=$(target),sel=$(source);box.replaceChildren();for(const val of values){const b=document.createElement('button');b.type='button';b.textContent=val;b.setAttribute('aria-pressed',String(sel.value===val));b.onclick=()=>{sel.value=val;renderPills();syncRegistration()};box.append(b)}}
 function renderPills(){pills('v49Sex','ocrSex',['牡','牝']);pills('v49Growth','ocrGrowth',['早熟','持続','普通','晩成'])}
-const observer=new MutationObserver(()=>{if(getSels().length===5){edited=[false,false,false,false,false];active=-1;syncMarks()}});
+// Keep registration fields synchronized without a second apply step.
+function syncRegistration(){
+ const sels=getSels();sels.forEach((sel,i)=>{const dst=$('m'+i);if(dst)dst.value=sel.value});
+ for(const [from,to] of [['ocrName','name'],['ocrSire','sire'],['ocrDam','dam'],['ocrSex','sex'],['ocrGrowth','growth']]){
+  const src=$(from),dst=$(to);if(src&&dst&&src.value.trim())dst.value=src.value.trim();
+ }
+}
+// OCR and classifier update values programmatically; sync at completion.
+const completion=$('ocrStatus');if(completion)new MutationObserver(()=>{
+ const t=completion.textContent||'';if(t.includes('完了しました')||t.includes('失敗しました'))syncRegistration();
+}).observe(completion,{childList:true,characterData:true,subtree:true});
+const comparison=$('growthCompareResult');if(comparison)new MutationObserver(()=>{renderPills();syncRegistration()}).observe(comparison,{childList:true,characterData:true,subtree:true});
+for(const id of ['ocrName','ocrSire','ocrDam','ocrSex','ocrGrowth']){
+ const el=$(id);if(el){el.addEventListener('input',syncRegistration);el.addEventListener('change',syncRegistration)}
+}
+const observer=new MutationObserver(()=>{if(getSels().length===5){edited=[false,false,false,false,false];active=-1;syncMarks();syncRegistration()}});
 observer.observe(scanGrid,{childList:true});
 for(const id of ['ocrSex','ocrGrowth'])$(id).addEventListener('change',renderPills);
-$('v49Apply').onclick=()=>{$('scanApply').click();$('v49Message').textContent='登録欄へ反映しました。内容を確認して「この馬を登録」を押してください。'};
+
 $('scanFile').addEventListener('change',()=>{edited=[false,false,false,false,false];active=-1;$('v49Message').textContent='新しい画像です。推定値を確認してください。';renderPills()});
 // OCR may set select values programmatically; refresh after OCR finishes.
 const ocrStatus=$('ocrStatus');if(ocrStatus)new MutationObserver(renderPills).observe(ocrStatus,{childList:true,characterData:true,subtree:true});
