@@ -5,11 +5,11 @@
 .scanGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}.scanGrid>div{text-align:center;font-size:12px}.scanGrid canvas{width:100%;max-width:80px;border:1px solid #ddd;border-radius:6px}.scanGrid select{width:100%;padding:5px 0;font-size:12px}.scanNote{font-size:12px;color:#667085}.scanPreview{width:100%;max-height:420px;object-fit:contain;border-radius:8px;background:#eee;display:block}.scanPhotoWrap{position:relative;display:inline-block;width:100%;touch-action:manipulation}.scanPin{position:absolute;transform:translate(-50%,-50%);background:#4538d4;color:white;border:2px solid white;border-radius:50%;font-size:12px;font-weight:bold;padding:3px 6px;pointer-events:none;box-shadow:0 1px 5px #2229}.scanAdjust{display:flex;flex-wrap:wrap;gap:10px}.scanAdjust label{font-size:12px}.scanAdjust input{width:105px}
 </style><style>
 .management-panel>h2{display:none}.management-panel>summary{font-weight:750;font-size:17px;cursor:pointer;list-style-position:inside;padding:3px 0}.management-panel[open]>summary{padding-bottom:12px;border-bottom:1px solid #eaecf0;margin-bottom:12px}.reference-box{margin-top:12px;padding:10px 7px 4px;border-top:1px solid #eaecf0;background:#f8f9fc;border-radius:8px;font-size:13px}.reference-box>b{display:block;color:#667085;font-size:12px;margin-bottom:7px}.reference-box .flex{align-items:flex-start;gap:5px;padding:3px 0}.reference-value{max-width:68%;text-align:right;overflow-wrap:anywhere}.management-panel{margin-top:12px}
-</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.6｜プログラム v4.6｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
+</style></head><body><main class="wrap"><header class="flex between"><div><h1>🐎 ダビスタ2 幼駒選別</h1><div class="muted">画面 v4.7｜プログラム v4.7｜マスター <span id="masterVersionTop">確認中</span><br>選別時点：2歳3月5週｜最大24頭</div></div><button id="export">バックアップ保存</button></header>
 <section class="panel" id="generationPanel"><div class="flex between"><h2>世代の選択</h2><span class="muted">西暦4桁・年表示</span></div><div class="flex" style="margin-top:12px"><label>世代 <select id="generation"></select></label><span class="muted">選択した世代の幼駒を表示</span></div></section>
 <section class="panel"><div class="bar"><div class="stat"><b id="count">0/24</b><span class="muted">登録頭数</span></div><div class="stat"><b id="gi">0</b><span class="muted">GⅠ候補</span></div><div class="stat"><b id="kept">0</b><span class="muted">確保指定</span></div></div></section>
 <section class="panel" id="auditPanel"><div class="flex between"><h2>🩺 データ確認・未処理アラーム</h2><button type="button" id="auditRefresh">再チェック</button></div><p class="muted">内部父母マスターとの対応・入力漏れを検査します。外部DB未照合だけでは警告しません。</p><div class="flex" style="margin:10px 0"><label class="small">検査範囲 <select id="auditScope"><option value="current">現在の世代</option><option value="all">全世代</option></select></label></div><div id="auditResults" aria-live="polite"></div></section>
-<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（傾き補正・広域OCR v4.6）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
+<section class="panel" id="scanPanel"><div class="flex between"><h2>📷 スクショ取り込み（傾き補正・広域OCR v4.7）</h2><span class="badge warn">確認必須・曖昧な印は保留</span></div>
 <p class="scanNote">テレビ画面を撮影した写真を選択します。ゲーム画面の緑色の見出しを手掛かりに表示位置を推定し、能力印5個の自動判定を試します。馬名・父馬・母馬は日本語OCRで読み取りを試みます。売却価格は手入力です。OCR用プログラムと日本語辞書を外部から取得しますが、選択した画像自体は送信しません。</p>
 <input id="scanFile" type="file" accept="image/*" style="width:100%;margin:6px 0"><div class="scanPhotoWrap" id="scanPhotoWrap"><img id="scanPreview" class="scanPreview hide" alt="選択した画像"><div id="scanPins"></div></div>
 <div id="scanResult" class="hide"><p class="scanNote">位置がずれている場合はX・Yを調整してください。印が正しく切り出されたことを確認してから判定してください。</p>
@@ -296,7 +296,7 @@ function updateDiagnostics(){const root=$('diagnosticContent');if(!root)return;r
 async function recognizeDiagnostic(label,rect){const canvas=cropDetected(ocrPhoto||photo,relativeRect(ocrAnchor||screenAnchor,rect));const result=await ocrWorker.recognize(canvas);addDiagnostic(label,canvas,result.data.text);return result}
 function cleanOCR(t){return String(t||'').replace(/[\s　|｜]+/g,'').replace(/^[ーｰ—―－・.、:：_]+|[ーｰ—―－・.、:：_]+$/g,'').replace(/^[馬名:：]+/,'').replace(/(の)[４２0-9０-９]{2}$/,m=>m.replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-65248)))}
 
-// v4.6: Estimate the screen-header inclination from green pixels, and rotate
+// v4.7: Estimate the screen-header inclination from green pixels, and rotate
 // the OCR copy only. The ability-mark image and manually selected points remain
 // on the original photo, so no stored mark coordinates are changed.
 function prepareLevelOCR(img,anchor){
@@ -375,7 +375,7 @@ $('ocrStatus').textContent='水平補正 '+(leveled.angle*180/Math.PI).toFixed(2
 // 父・母: 競走成績の誕生行に表示される2つの馬名。
 const nameResult=await recognizeDiagnostic('馬名',[75,75,315,48]);
 $('ocrName').value=cleanOCR(nameResult.data.text).replace(/^[馬名:：]+/,'');
-// v4.6: Search a wide race-history area, instead of guessing narrow columns.
+// v4.7: Search a wide race-history area, instead of guessing narrow columns.
 // A year marker and 誕生 are useful hints, but may be lost in OCR.
 $('ocrStatus').textContent='競走成績を広域で読み取り、父母マスターと照合しています…';
 const parentState=window.dabistaMasterAPI?.getState?.()||{};
@@ -429,16 +429,32 @@ if(!sexVotes.length){
 const maleVotes=sexVotes.filter(v=>v==='牡').length;
 const femaleVotes=sexVotes.filter(v=>v==='牝').length;
 $('ocrSex').value=maleVotes>0&&femaleVotes===0?'牡':femaleVotes>0&&maleVotes===0?'牝':'';
-$('ocrStatus').textContent='成長型を読み取り中…';
-const growthVotes=[];
-for(const rect of [[87,222,145,43],[95,225,130,34],[70,215,175,53]]){
- const result=await recognizeDiagnostic('成長型 '+rect.join(','),rect);
- const text=cleanOCR(result.data.text).normalize('NFKC');
- const hits=['早熟','普通','晩成','持続'].filter(x=>text.includes(x));
- if(hits.length===1)growthVotes.push(hits[0]);
+$('ocrStatus').textContent='成長型を育成馬パネル内から探索しています…';
+// v4.7: The old [87,222,...] crops could capture unrelated text.
+// Search the horse-info panel only. Keep every candidate visible in diagnostics.
+// Coordinates are relative to the detected screen anchor, not photo pixels.
+const growthRegions=[
+ [70,138,175,40],[70,158,175,40],[70,178,175,40],
+ [70,198,175,40],[70,218,175,40]
+];
+const growthCandidates=[];
+for(const rect of growthRegions){
+ const result=await recognizeDiagnostic('成長型・探索 '+rect.join(','),rect);
+ const t=cleanOCR(result.data.text).normalize('NFKC');
+ const matches=['早熟','持続','普通','晩成'].filter(x=>t.includes(x));
+ // Avoid auto-accepting multiple labels, and reject long unrelated OCR strings.
+ if(matches.length===1&&t.length<=14)growthCandidates.push({value:matches[0],rect,text:t});
 }
-$('ocrGrowth').value=growthVotes.length&&growthVotes.every(x=>x===growthVotes[0])?growthVotes[0]:'';
-const growthNotice=$('ocrGrowth').value?' 成長型「'+$('ocrGrowth').value+'」を推定しました。':' 成長型は判定保留です。手動で選んでください。';
+const distinctGrowth=[...new Set(growthCandidates.map(x=>x.value))];
+// One isolated reading is too fragile; require two agreeing nearby crops.
+let confirmedGrowth='';
+if(distinctGrowth.length===1){
+ const candidates=growthCandidates.filter(x=>x.value===distinctGrowth[0]);
+ if(candidates.length>=2&&candidates.some((c,i)=>candidates.slice(i+1).some(d=>Math.abs(c.rect[1]-d.rect[1])<=25)))confirmedGrowth=distinctGrowth[0];
+}
+$('ocrGrowth').value=confirmedGrowth;
+const growthNotice=confirmedGrowth?' 成長型「'+confirmedGrowth+'」を育成馬パネルから推定しました（要確認）。':' 成長型は候補が不足または矛盾したため保留しました。診断画像を確認してください。';
+if(!confirmedGrowth)$('scanDiagnostics').open=true;
 const sexNotice=$('ocrSex').value?'性別「'+$('ocrSex').value+'」を推定しました。ゲーム画面と照合してください。':'性別は判定保留です。画像の「牡2／牝2」を確認して手動で選んでください。';
 // Fall back to the common unnamed-foal pattern only if the dam field was not recognized.
 // Unreadable parent names stay blank; never infer them from a foal nickname.
